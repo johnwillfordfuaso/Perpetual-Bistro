@@ -1,0 +1,679 @@
+{
+  "meta": {
+    "llm": "scripted-stub (offline demo, not a real Qwen run)",
+    "started_at": "2026-10-21T10:38:00",
+    "service_fee_rate": 0.1,
+    "currency": "PHP"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "timestamp": "2026-10-21T10:38:00",
+      "user": "Table 4",
+      "state_before": "STATE_GREETING",
+      "tool_calls": [],
+      "state_transitions": [
+        {
+          "from": "STATE_GREETING",
+          "to": "STATE_TAKING_ORDER",
+          "reason": "table 4 captured, session 1 opened"
+        }
+      ],
+      "state_after": "STATE_TAKING_ORDER",
+      "assistant": "Lovely, Table 4 is all set! What can I get for you? You can ask about the menu (type /menu to see everything).",
+      "db_state": {
+        "session": {
+          "session_id": 1,
+          "table_no": 4,
+          "status": "active",
+          "payment_method": null
+        },
+        "order": {
+          "status": "ok",
+          "session_id": 1,
+          "table_no": 4,
+          "is_empty": true,
+          "items": [],
+          "subtotal": 0.0,
+          "service_fee_rate": 0.1,
+          "service_fee": 0.0,
+          "grand_total": 0.0,
+          "currency": "PHP"
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "2026-10-21T10:38:00",
+      "user": "What drinks do you have?",
+      "state_before": "STATE_TAKING_ORDER",
+      "tool_calls": [
+        {
+          "tool": "get_menu_by_category",
+          "arguments": {
+            "category": "Drinks"
+          },
+          "result": {
+            "status": "error",
+            "error": "unknown_tool",
+            "message": "There is no tool named 'get_menu_by_category'."
+          }
+        }
+      ],
+      "state_transitions": [],
+      "state_after": "STATE_TAKING_ORDER",
+      "assistant": "We have Iced Tea (PHP 50), Mango Smoothie (PHP 90), Cola (PHP 45) and Bottled Water (PHP 30).",
+      "db_state": {
+        "session": {
+          "session_id": 1,
+          "table_no": 4,
+          "status": "active",
+          "payment_method": null
+        },
+        "order": {
+          "status": "ok",
+          "session_id": 1,
+          "table_no": 4,
+          "is_empty": true,
+          "items": [],
+          "subtotal": 0.0,
+          "service_fee_rate": 0.1,
+          "service_fee": 0.0,
+          "grand_total": 0.0,
+          "currency": "PHP"
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "2026-10-21T10:38:00",
+      "user": "I'd like 2 cheeseburgers without onions, extra cheese",
+      "state_before": "STATE_TAKING_ORDER",
+      "tool_calls": [
+        {
+          "tool": "add_item_to_order",
+          "arguments": {
+            "item_name": "Cheeseburger",
+            "qty": 2,
+            "instructions": "No onions, extra cheese"
+          },
+          "result": {
+            "status": "ok",
+            "added": {
+              "item": "Cheeseburger",
+              "quantity": 2,
+              "instructions": "No onions, extra cheese",
+              "unit_price": 180.0
+            }
+          }
+        }
+      ],
+      "state_transitions": [],
+      "state_after": "STATE_TAKING_ORDER",
+      "assistant": "Added 2 Cheeseburgers (no onions, extra cheese) to your tab. Anything else?",
+      "db_state": {
+        "session": {
+          "session_id": 1,
+          "table_no": 4,
+          "status": "active",
+          "payment_method": null
+        },
+        "order": {
+          "status": "ok",
+          "session_id": 1,
+          "table_no": 4,
+          "is_empty": false,
+          "items": [
+            {
+              "name": "Cheeseburger",
+              "quantity": 2,
+              "instructions": "No onions, extra cheese",
+              "unit_price": 180.0,
+              "line_total": 360.0
+            }
+          ],
+          "subtotal": 360.0,
+          "service_fee_rate": 0.1,
+          "service_fee": 36.0,
+          "grand_total": 396.0,
+          "currency": "PHP"
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "2026-10-21T10:38:00",
+      "user": "Add an order of onion rings",
+      "state_before": "STATE_TAKING_ORDER",
+      "tool_calls": [
+        {
+          "tool": "add_item_to_order",
+          "arguments": {
+            "item_name": "Onion Rings",
+            "qty": 1,
+            "instructions": ""
+          },
+          "result": {
+            "status": "error",
+            "error": "sold_out",
+            "message": "Item 'Onion Rings' is currently sold out."
+          }
+        }
+      ],
+      "state_transitions": [],
+      "state_after": "STATE_TAKING_ORDER",
+      "assistant": "Sorry, the Onion Rings are sold out today. I can offer French Fries (PHP 80) or a Garden Salad (PHP 95) instead.",
+      "db_state": {
+        "session": {
+          "session_id": 1,
+          "table_no": 4,
+          "status": "active",
+          "payment_method": null
+        },
+        "order": {
+          "status": "ok",
+          "session_id": 1,
+          "table_no": 4,
+          "is_empty": false,
+          "items": [
+            {
+              "name": "Cheeseburger",
+              "quantity": 2,
+              "instructions": "No onions, extra cheese",
+              "unit_price": 180.0,
+              "line_total": 360.0
+            }
+          ],
+          "subtotal": 360.0,
+          "service_fee_rate": 0.1,
+          "service_fee": 36.0,
+          "grand_total": 396.0,
+          "currency": "PHP"
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "2026-10-21T10:38:00",
+      "user": "One French fries instead, and an iced tea",
+      "state_before": "STATE_TAKING_ORDER",
+      "tool_calls": [
+        {
+          "tool": "add_item_to_order",
+          "arguments": {
+            "item_name": "French Fries",
+            "qty": 1
+          },
+          "result": {
+            "status": "ok",
+            "added": {
+              "item": "French Fries",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 80.0
+            }
+          }
+        },
+        {
+          "tool": "add_item_to_order",
+          "arguments": {
+            "item_name": "Iced Tea",
+            "qty": 1
+          },
+          "result": {
+            "status": "ok",
+            "added": {
+              "item": "Iced Tea",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 75.0
+            }
+          }
+        }
+      ],
+      "state_transitions": [],
+      "state_after": "STATE_TAKING_ORDER",
+      "assistant": "Done - 1 French Fries and 1 Iced Tea are on your tab.",
+      "db_state": {
+        "session": {
+          "session_id": 1,
+          "table_no": 4,
+          "status": "active",
+          "payment_method": null
+        },
+        "order": {
+          "status": "ok",
+          "session_id": 1,
+          "table_no": 4,
+          "is_empty": false,
+          "items": [
+            {
+              "name": "Cheeseburger",
+              "quantity": 2,
+              "instructions": "No onions, extra cheese",
+              "unit_price": 180.0,
+              "line_total": 360.0
+            },
+            {
+              "name": "French Fries",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 80.0,
+              "line_total": 80.0
+            },
+            {
+              "name": "Iced Tea",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 75.0,
+              "line_total": 75.0
+            }
+          ],
+          "subtotal": 515.0,
+          "service_fee_rate": 0.1,
+          "service_fee": 51.5,
+          "grand_total": 566.5,
+          "currency": "PHP"
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "2026-10-21T10:38:00",
+      "user": "Does the cheeseburger have dairy?",
+      "state_before": "STATE_TAKING_ORDER",
+      "tool_calls": [
+        {
+          "tool": "check_item_allergen",
+          "arguments": {
+            "item_id": 1,
+            "allergen": "dairy"
+          },
+          "result": {
+            "status": "error",
+            "error": "unknown_tool",
+            "message": "There is no tool named 'check_item_allergen'."
+          }
+        }
+      ],
+      "state_transitions": [],
+      "state_after": "STATE_TAKING_ORDER",
+      "assistant": "Yes, the Cheeseburger contains dairy (it also has gluten and egg).",
+      "db_state": {
+        "session": {
+          "session_id": 1,
+          "table_no": 4,
+          "status": "active",
+          "payment_method": null
+        },
+        "order": {
+          "status": "ok",
+          "session_id": 1,
+          "table_no": 4,
+          "is_empty": false,
+          "items": [
+            {
+              "name": "Cheeseburger",
+              "quantity": 2,
+              "instructions": "No onions, extra cheese",
+              "unit_price": 180.0,
+              "line_total": 360.0
+            },
+            {
+              "name": "French Fries",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 80.0,
+              "line_total": 80.0
+            },
+            {
+              "name": "Iced Tea",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 75.0,
+              "line_total": 75.0
+            }
+          ],
+          "subtotal": 515.0,
+          "service_fee_rate": 0.1,
+          "service_fee": 51.5,
+          "grand_total": 566.5,
+          "currency": "PHP"
+        }
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "2026-10-21T10:38:00",
+      "user": "Actually remove the garden salad",
+      "state_before": "STATE_TAKING_ORDER",
+      "tool_calls": [
+        {
+          "tool": "remove_item_from_order",
+          "arguments": {
+            "item_name": "Garden Salad"
+          },
+          "result": {
+            "status": "error",
+            "error": "not_in_order",
+            "message": "Item 'Garden Salad' is not in your current order."
+          }
+        }
+      ],
+      "state_transitions": [],
+      "state_after": "STATE_TAKING_ORDER",
+      "assistant": "The Garden Salad isn't on your order - you currently have Cheeseburgers, French Fries and an Iced Tea.",
+      "db_state": {
+        "session": {
+          "session_id": 1,
+          "table_no": 4,
+          "status": "active",
+          "payment_method": null
+        },
+        "order": {
+          "status": "ok",
+          "session_id": 1,
+          "table_no": 4,
+          "is_empty": false,
+          "items": [
+            {
+              "name": "Cheeseburger",
+              "quantity": 2,
+              "instructions": "No onions, extra cheese",
+              "unit_price": 180.0,
+              "line_total": 360.0
+            },
+            {
+              "name": "French Fries",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 80.0,
+              "line_total": 80.0
+            },
+            {
+              "name": "Iced Tea",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 75.0,
+              "line_total": 75.0
+            }
+          ],
+          "subtotal": 515.0,
+          "service_fee_rate": 0.1,
+          "service_fee": 51.5,
+          "grand_total": 566.5,
+          "currency": "PHP"
+        }
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "2026-10-21T10:38:00",
+      "user": "What's the capital of France?",
+      "state_before": "STATE_TAKING_ORDER",
+      "tool_calls": [],
+      "state_transitions": [],
+      "state_after": "STATE_TAKING_ORDER",
+      "assistant": "I'm only able to help with Perpetual Bistro orders. Can I get you anything else from the menu?",
+      "db_state": {
+        "session": {
+          "session_id": 1,
+          "table_no": 4,
+          "status": "active",
+          "payment_method": null
+        },
+        "order": {
+          "status": "ok",
+          "session_id": 1,
+          "table_no": 4,
+          "is_empty": false,
+          "items": [
+            {
+              "name": "Cheeseburger",
+              "quantity": 2,
+              "instructions": "No onions, extra cheese",
+              "unit_price": 180.0,
+              "line_total": 360.0
+            },
+            {
+              "name": "French Fries",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 80.0,
+              "line_total": 80.0
+            },
+            {
+              "name": "Iced Tea",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 75.0,
+              "line_total": 75.0
+            }
+          ],
+          "subtotal": 515.0,
+          "service_fee_rate": 0.1,
+          "service_fee": 51.5,
+          "grand_total": 566.5,
+          "currency": "PHP"
+        }
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "2026-10-21T10:38:00",
+      "user": "That's all",
+      "state_before": "STATE_TAKING_ORDER",
+      "tool_calls": [],
+      "state_transitions": [
+        {
+          "from": "STATE_TAKING_ORDER",
+          "to": "STATE_REVIEW",
+          "reason": "customer finished ordering"
+        }
+      ],
+      "state_after": "STATE_REVIEW",
+      "assistant": "Here is your order for Table 4:\n\n  2x Cheeseburger (No onions, extra cheese)            360.00\n  1x French Fries                                       80.00\n  1x Iced Tea                                           75.00\n  ------------------------------------------------------------\n  Subtotal:                                             515.00\n  Service fee (10%):                                     51.50\n  TOTAL (PHP):                                          566.50\n\nShall I send this to the kitchen? Say 'yes' to confirm and tell me how you'd like to pay (GCash, Cash, BPI, Metrobank, Maribank), or tell me what to change.",
+      "db_state": {
+        "session": {
+          "session_id": 1,
+          "table_no": 4,
+          "status": "active",
+          "payment_method": null
+        },
+        "order": {
+          "status": "ok",
+          "session_id": 1,
+          "table_no": 4,
+          "is_empty": false,
+          "items": [
+            {
+              "name": "Cheeseburger",
+              "quantity": 2,
+              "instructions": "No onions, extra cheese",
+              "unit_price": 180.0,
+              "line_total": 360.0
+            },
+            {
+              "name": "French Fries",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 80.0,
+              "line_total": 80.0
+            },
+            {
+              "name": "Iced Tea",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 75.0,
+              "line_total": 75.0
+            }
+          ],
+          "subtotal": 515.0,
+          "service_fee_rate": 0.1,
+          "service_fee": 51.5,
+          "grand_total": 566.5,
+          "currency": "PHP"
+        }
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "2026-10-21T10:38:00",
+      "user": "Yes",
+      "state_before": "STATE_REVIEW",
+      "tool_calls": [],
+      "state_transitions": [],
+      "state_after": "STATE_REVIEW",
+      "assistant": "Almost done! How would you like to pay? We accept GCash, Cash, BPI, Metrobank, Maribank.",
+      "db_state": {
+        "session": {
+          "session_id": 1,
+          "table_no": 4,
+          "status": "active",
+          "payment_method": null
+        },
+        "order": {
+          "status": "ok",
+          "session_id": 1,
+          "table_no": 4,
+          "is_empty": false,
+          "items": [
+            {
+              "name": "Cheeseburger",
+              "quantity": 2,
+              "instructions": "No onions, extra cheese",
+              "unit_price": 180.0,
+              "line_total": 360.0
+            },
+            {
+              "name": "French Fries",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 80.0,
+              "line_total": 80.0
+            },
+            {
+              "name": "Iced Tea",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 75.0,
+              "line_total": 75.0
+            }
+          ],
+          "subtotal": 515.0,
+          "service_fee_rate": 0.1,
+          "service_fee": 51.5,
+          "grand_total": 566.5,
+          "currency": "PHP"
+        }
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "2026-10-21T10:38:00",
+      "user": "GCash",
+      "state_before": "STATE_REVIEW",
+      "tool_calls": [
+        {
+          "tool": "confirm_order",
+          "arguments": {
+            "session_id": 1,
+            "payment_method": "GCash"
+          },
+          "result": {
+            "payment_method": "GCash",
+            "payment_type": "online",
+            "payment_note": "Pay with GCash. Show your payment confirmation to the cashier.",
+            "status": "ok",
+            "session_id": 1,
+            "table_no": 4,
+            "items": [
+              {
+                "name": "Cheeseburger",
+                "quantity": 2,
+                "instructions": "No onions, extra cheese",
+                "unit_price": 180.0,
+                "line_total": 360.0
+              },
+              {
+                "name": "French Fries",
+                "quantity": 1,
+                "instructions": "",
+                "unit_price": 80.0,
+                "line_total": 80.0
+              },
+              {
+                "name": "Iced Tea",
+                "quantity": 1,
+                "instructions": "",
+                "unit_price": 75.0,
+                "line_total": 75.0
+              }
+            ],
+            "subtotal": 515.0,
+            "service_fee": 51.5,
+            "grand_total": 566.5,
+            "currency": "PHP",
+            "confirmed_at": "Just now"
+          }
+        }
+      ],
+      "state_transitions": [
+        {
+          "from": "STATE_REVIEW",
+          "to": "STATE_CONFIRMED",
+          "reason": "customer confirmed order"
+        },
+        {
+          "from": "STATE_CONFIRMED",
+          "to": "STATE_GREETING",
+          "reason": "session reset for next customer"
+        }
+      ],
+      "state_after": "STATE_GREETING",
+      "assistant": "================================================================\n  PERPETUAL BISTRO - OFFICIAL RECEIPT\n  Table 4   Session #1   Just now\n================================================================\n  2x Cheeseburger (No onions, extra cheese)            360.00\n  1x French Fries                                       80.00\n  1x Iced Tea                                           75.00\n  ------------------------------------------------------------\n  Subtotal:                                             515.00\n  Service fee (10%):                                     51.50\n  TOTAL (PHP):                                          566.50\n----------------------------------------------------------------\n  Payment method: GCash\n  Pay with GCash. Show your payment confirmation to the cashier.\n================================================================\n  Your order has been sent to the kitchen. Thank you!\n================================================================\n\nWelcome to Perpetual Bistro! Which table number are you seated at?",
+      "db_state": {
+        "session": {
+          "session_id": 1,
+          "table_no": 4,
+          "status": "confirmed",
+          "payment_method": "GCash"
+        },
+        "order": {
+          "status": "ok",
+          "session_id": 1,
+          "table_no": 4,
+          "is_empty": false,
+          "items": [
+            {
+              "name": "Cheeseburger",
+              "quantity": 2,
+              "instructions": "No onions, extra cheese",
+              "unit_price": 180.0,
+              "line_total": 360.0
+            },
+            {
+              "name": "French Fries",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 80.0,
+              "line_total": 80.0
+            },
+            {
+              "name": "Iced Tea",
+              "quantity": 1,
+              "instructions": "",
+              "unit_price": 75.0,
+              "line_total": 75.0
+            }
+          ],
+          "subtotal": 515.0,
+          "service_fee_rate": 0.1,
+          "service_fee": 51.5,
+          "grand_total": 566.5,
+          "currency": "PHP"
+        }
+      }
+    }
+  ]
+}

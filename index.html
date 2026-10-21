@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpetual Bistro - Virtual Waiter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #fcf8f2; font-family: system-ui, -apple-system, sans-serif; }
+        .hero-banner { background-color: #a04000; color: white; border-radius: 12px; padding: 20px; }
+        .dish-card { border: none; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; background: white; }
+        .dish-card:hover { transform: translateY(-3px); }
+        .dish-img { height: 160px; object-fit: cover; border-top-left-radius: 12px; border-top-right-radius: 12px; }
+        .dish-emoji { height: 160px; display: flex; align-items: center; justify-content: center; font-size: 4rem;
+                      background: #f3e9dc; border-top-left-radius: 12px; border-top-right-radius: 12px; }
+        .dish-card.sold-out { opacity: 0.55; }
+        .chat-box { height: 350px; overflow-y: auto; background: #fff; border: 1px solid #dee2e6; border-radius: 8px; padding: 15px; }
+        .chat-msg { margin-bottom: 10px; padding: 8px 12px; border-radius: 6px; font-size: 0.9rem; white-space: pre-wrap; word-break: break-word; }
+        .chat-msg.user { background: #e2f0d9; text-align: right; margin-left: 20%; }
+        .chat-msg.waiter { background: #f1f1f1; text-align: left; margin-right: 5%; }
+        .chat-msg.waiter.mono { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.72rem; }
+        .chat-msg.typing { color: #888; font-style: italic; }
+        .table-btn.active { background: #212529; color: #fff; }
+
+        /* Mic button */
+        #micBtn.listening { background: #dc3545; border-color: #dc3545; color: #fff; animation: micPulse 1.2s infinite; }
+        @keyframes micPulse {
+            0%   { box-shadow: 0 0 0 0 rgba(220,53,69,0.55); }
+            70%  { box-shadow: 0 0 0 10px rgba(220,53,69,0); }
+            100% { box-shadow: 0 0 0 0 rgba(220,53,69,0); }
+        }
+
+        /* Payment modal */
+        .pay-option { cursor: pointer; border-radius: 10px !important; margin-bottom: 8px; border: 2px solid #e5e5e5; }
+        .pay-option:hover { border-color: #a04000; }
+        .pay-option.selected { border-color: #a04000; background: #fff4ea; }
+        .pay-icon { font-size: 1.6rem; width: 2.2rem; text-align: center; }
+        .pay-heading { font-size: 0.75rem; letter-spacing: .06em; text-transform: uppercase; color: #777; margin: 12px 0 6px; }
+
+        @keyframes popCart {
+            0% { transform: scale(1); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+            50% { transform: scale(1.03); box-shadow: 0 8px 20px rgba(160, 64, 0, 0.3); border-color: #a04000; }
+            100% { transform: scale(1); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        }
+        .cart-pop { animation: popCart 0.4s ease-in-out; }
+    </style>
+</head>
+<body>
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <h2 class="mb-0">Perpetual Bistro <small class="text-muted fs-6">VIRTUAL WAITER</small></h2>
+        <div class="d-flex align-items-center gap-2 flex-wrap">
+            <button onclick="toggleVoice()" id="voiceToggleBtn" class="btn btn-sm btn-outline-secondary">🔊 Voice: ON</button>
+            <span id="aiStatus" class="badge bg-warning text-dark" title="">AI: checking...</span>
+            <span id="tableBadge" class="badge bg-secondary">Table: None</span>
+            <button onclick="resetCustomer()" class="btn btn-outline-danger btn-sm">New customer</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div id="tableBanner" class="hero-banner mb-4">
+                <h4>Welcome! Where are you seated?</h4>
+                <p class="mb-3">Pick your table number to start your order or chat with the waiter.</p>
+                <div class="d-flex flex-wrap gap-2" id="tableButtons"></div>
+            </div>
+
+            <h4>Today's Menu</h4>
+            <p class="text-muted small">Pick a table first, then choose a quantity and tap Add to Cart, or chat with the waiter.</p>
+            <div class="row row-cols-1 row-cols-md-3 g-4 mb-4" id="menuContainer"></div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card mb-4 shadow-sm" id="cartCard">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Your Cart</h5>
+                    <span class="badge bg-danger rounded-pill" id="cartCount">0</span>
+                </div>
+                <div class="card-body" id="cartItemsContainer">
+                    <p class="text-muted text-center my-3">Your cart is empty.</p>
+                </div>
+                <div class="card-footer bg-white d-flex gap-2">
+                    <button onclick="clearCart()" class="btn btn-outline-secondary w-50">Clear</button>
+                    <button onclick="openCheckout()" id="confirmBtn" class="btn btn-warning w-50 text-dark fw-bold">Checkout</button>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header bg-white"><h5 class="mb-0">Chat with the waiter</h5></div>
+                <div class="card-body">
+                    <div class="chat-box mb-3" id="chatBox"></div>
+                    <div class="input-group">
+                        <input type="text" id="chatInput" class="form-control" placeholder="e.g. 2 cheeseburgers, no onions" onkeypress="handleKeyPress(event)">
+                        <button class="btn btn-outline-dark" id="micBtn" type="button" onclick="toggleMic()" title="Speak your order" aria-label="Speak your order">🎤</button>
+                        <button class="btn btn-dark" id="sendBtn" onclick="sendChatMessage()">Send</button>
+                    </div>
+                    <div class="form-check form-switch mt-2 small text-muted">
+                        <input class="form-check-input" type="checkbox" id="autoSend" checked>
+                        <label class="form-check-label" for="autoSend">Send automatically after I speak</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Payment modal -->
+<div class="modal fade" id="payModal" tabindex="-1" aria-labelledby="payModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="payModalTitle">Checkout</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="paySummary" class="small mb-3"></div>
+                <h6 class="mb-1">How would you like to pay?</h6>
+                <div id="payOptions"></div>
+                <div id="payNote" class="alert alert-light border small mt-3 mb-0" style="display:none"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Back to menu</button>
+                <button type="button" class="btn btn-warning fw-bold text-dark" id="payConfirmBtn" onclick="submitPayment()" disabled>Choose a payment method</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// ---------------------------------------------------------------
+// State
+// ---------------------------------------------------------------
+let currentTableNo = null;
+let agentState = 'STATE_GREETING';
+let voiceEnabled = true;
+let lastCartSig = '';
+let menuByName = {};
+let busy = false;
+let lastCart = null;
+let paymentMethods = [];
+let selectedMethod = null;
+let payModal = null;
+let paying = false;
+
+const WELCOME = 'Welcome to Perpetual Bistro! Which table number are you seated at?';
+
+// ---------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------
+function esc(s) {
+    return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function php(n) {
+    return '₱' + Number(n || 0).toLocaleString('en-PH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+async function api(path, method = 'GET', body = null) {
+    const opts = { method, headers: { 'Content-Type': 'application/json' } };
+    if (body !== null) opts.body = JSON.stringify(body);
+    const res = await fetch(path, opts);
+    let data = {};
+    try { data = await res.json(); } catch (e) {}
+    return { ok: res.ok, status: res.status, data };
+}
+
+// ---------------------------------------------------------------
+// Voice
+// ---------------------------------------------------------------
+function toggleVoice() {
+    voiceEnabled = !voiceEnabled;
+    document.getElementById('voiceToggleBtn').innerHTML = voiceEnabled ? '🔊 Voice: ON' : '🔇 Voice: OFF';
+    if (!voiceEnabled && 'speechSynthesis' in window) window.speechSynthesis.cancel();
+}
+function speakResponse(text) {
+    if (!voiceEnabled || !('speechSynthesis' in window)) return;
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(String(text).split('\n')[0].slice(0, 200));
+    u.lang = 'en-US';
+    window.speechSynthesis.speak(u);
+}
+
+// ---------------------------------------------------------------
+// AI status (GET /api/status)
+// ---------------------------------------------------------------
+async function checkStatus() {
+    const badge = document.getElementById('aiStatus');
+    try {
+        const { data } = await api('/api/status');
+        if (data.status === 'ok') {
+            badge.className = 'badge bg-success';
+            badge.innerText = 'AI: active';
+            badge.title = data.model || '';
+        } else if (data.online && !data.model_installed) {
+            badge.className = 'badge bg-warning text-dark';
+            badge.innerText = 'AI: model missing';
+            badge.title = data.hint || '';
+        } else {
+            badge.className = 'badge bg-danger';
+            badge.innerText = 'AI: offline';
+            badge.title = data.hint || '';
+        }
+    } catch (e) {
+        badge.className = 'badge bg-danger';
+        badge.innerText = 'AI: error';
+        badge.title = 'Cannot reach the dashboard server';
+    }
+}
+
+// ---------------------------------------------------------------
+// Tables
+// ---------------------------------------------------------------
+function buildTableButtons() {
+    const wrap = document.getElementById('tableButtons');
+    for (let n = 1; n <= 8; n++) {
+        const b = document.createElement('button');
+        b.className = 'btn btn-light text-dark fw-bold px-3 table-btn';
+        b.id = 'table-btn-' + n;
+        b.textContent = n;
+        b.onclick = () => selectTable(n);
+        wrap.appendChild(b);
+    }
+}
+function markTable(n) {
+    currentTableNo = n;
+    document.getElementById('tableBadge').innerText = n ? `Table: ${n}` : 'Table: None';
+    document.querySelectorAll('.table-btn').forEach(b => b.classList.toggle('active', b.id === 'table-btn-' + n));
+}
+function selectTable(n) {
+    // The FSM creates the session when it hears "Table N".
+    sendChatText(`Table ${n}`, false);
+}
+
+// ---------------------------------------------------------------
+// Menu
+// ---------------------------------------------------------------
+async function loadMenu() {
+    const container = document.getElementById('menuContainer');
+    try {
+        const { data } = await api('/api/menu');
+        const menu = data.menu || {};
+        container.innerHTML = '';
+        menuByName = {};
+        let idx = 0;
+        for (const category in menu) {
+            menu[category].forEach(item => {
+                const i = idx++;
+                menuByName[i] = item.name;
+                const media = item.image
+                    ? `<img src="${esc(item.image)}" class="dish-img" alt="${esc(item.name)}">`
+                    : `<div class="dish-emoji">${item.emoji || '🍽️'}</div>`;
+                const action = item.available
+                    ? `<div class="input-group input-group-sm">
+                           <input type="number" min="1" max="20" value="1" id="qty-${i}" class="form-control text-center">
+                           <button class="btn btn-outline-dark" onclick="addItem(${i})">Add to Cart</button>
+                       </div>`
+                    : `<button class="btn btn-sm btn-secondary w-100" disabled>Sold out</button>`;
+                container.insertAdjacentHTML('beforeend', `
+                    <div class="col">
+                        <div class="card dish-card h-100 ${item.available ? '' : 'sold-out'}">
+                            ${media}
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-baseline mb-2">
+                                    <h6 class="card-title mb-0 fw-bold">${esc(item.name)}</h6>
+                                    <span class="text-success fw-bold">${php(item.price)}</span>
+                                </div>
+                                <p class="card-text text-muted small flex-grow-1">${esc(item.description || '')}</p>
+                                ${action}
+                            </div>
+                        </div>
+                    </div>`);
+            });
+        }
+    } catch (e) {
+        container.innerHTML = '<p class="text-danger">Could not load the menu.</p>';
+    }
+}
+
+// ---------------------------------------------------------------
+// Chat
+// ---------------------------------------------------------------
+function appendChat(sender, text) {
+    const box = document.getElementById('chatBox');
+    const div = document.createElement('div');
+    const mono = sender === 'waiter' && /^\s*(=|-|\d+x )/m.test(text) && text.includes('\n');
+    div.className = `chat-msg ${sender}${mono ? ' mono' : ''}`;
+    div.textContent = text;           // textContent: safe + keeps receipts' line breaks
+    box.appendChild(div);
+    box.scrollTop = box.scrollHeight;
+    return div;
+}
+function handleKeyPress(e) { if (e.key === 'Enter') sendChatMessage(); }
+function sendChatMessage() {
+    const input = document.getElementById('chatInput');
+    const text = input.value.trim();
+    if (!text || busy) return;
+    input.value = '';
+    sendChatText(text, false);
+}
+
+async function sendChatText(text, silentUser) {
+    if (busy) return;
+    busy = true;
+    if (!silentUser) appendChat('user', text);
+    const typing = appendChat('waiter typing', 'Waiter is typing…');
+    let needsPayment = false;
+    try {
+        const { data } = await api('/api/chat', 'POST', { text });
+        typing.remove();
+        needsPayment = !!data.needs_payment;
+        if (data.reply) {
+            appendChat('waiter', data.reply);
+            speakResponse(data.reply);
+        } else if (data.message) {
+            appendChat('waiter', data.message);
+        }
+    } catch (e) {
+        typing.remove();
+        appendChat('waiter', 'Sorry, I could not reach the server.');
+    } finally {
+        busy = false;
+    }
+    await refreshState();   // always re-sync cart / table / state after chat
+    if (needsPayment) openCheckout();
+}
+
+// ---------------------------------------------------------------
+// Cart (GET /api/state is the single source of truth)
+// ---------------------------------------------------------------
+async function refreshState() {
+    try {
+        const { data } = await api('/api/state');
+        agentState = data.state || 'STATE_GREETING';
+        markTable(data.table_no || null);
+        renderCart(data.cart);
+    } catch (e) {
+        console.error('Error fetching state:', e);
+    }
+}
+
+function renderCart(cart) {
+    const container = document.getElementById('cartItemsContainer');
+    const countBadge = document.getElementById('cartCount');
+    const items = (cart && cart.items) || [];
+    lastCart = cart && items.length ? cart : null;
+
+    const sig = JSON.stringify(items);
+    if (sig !== lastCartSig) {            // pop only when the cart really changed
+        lastCartSig = sig;
+        const card = document.getElementById('cartCard');
+        card.classList.remove('cart-pop');
+        void card.offsetWidth;
+        card.classList.add('cart-pop');
+    }
+
+    countBadge.innerText = items.reduce((n, i) => n + (i.quantity || 0), 0);
+
+    if (items.length === 0) {
+        container.innerHTML = '<p class="text-muted text-center my-3">Your cart is empty.</p>';
+        return;
+    }
+
+    let html = '<ul class="list-group list-group-flush">';
+    items.forEach((it, i) => {
+        html += `
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                <div>
+                    <h6 class="mb-0">${esc(it.name)}</h6>
+                    ${it.instructions ? `<small class="text-muted d-block fst-italic">${esc(it.instructions)}</small>` : ''}
+                    <small class="text-muted">${it.quantity}x @ ${php(it.unit_price)} = ${php(it.line_total)}</small>
+                </div>
+                <button class="btn btn-sm btn-outline-danger" title="Remove" onclick="removeItem(${i})">&times;</button>
+            </li>`;
+    });
+    html += '</ul>';
+    html += `
+        <div class="border-top pt-2 mt-2 small">
+            <div class="d-flex justify-content-between"><span>Subtotal</span><span>${php(cart.subtotal)}</span></div>
+            <div class="d-flex justify-content-between"><span>Service fee (${Math.round((cart.service_fee_rate || 0) * 100)}%)</span><span>${php(cart.service_fee)}</span></div>
+            <div class="d-flex justify-content-between fw-bold fs-6 mt-1"><span>Total</span><span>${php(cart.grand_total)}</span></div>
+        </div>`;
+    container.innerHTML = html;
+    container._items = items;              // for removeItem(index)
+}
+
+async function addItem(i) {
+    const name = menuByName[i];
+    const qty = Math.max(1, parseInt(document.getElementById(`qty-${i}`).value, 10) || 1);
+    try {
+        const { ok, data } = await api('/api/order/add', 'POST', { item_name: name, qty });
+        if (ok) {
+            renderCart(data.cart);                    // instant update from the response
+            const msg = `Added ${qty}x ${name} to cart!`;
+            appendChat('waiter', msg);
+            speakResponse(msg);
+            await refreshState();
+        } else {
+            const msg = data.message || 'Could not add that item.';
+            appendChat('waiter', msg);
+            speakResponse(msg);
+        }
+    } catch (e) {
+        appendChat('waiter', 'Sorry, I could not reach the server.');
+    }
+}
+
+async function removeItem(i) {
+    const items = document.getElementById('cartItemsContainer')._items || [];
+    const it = items[i];
+    if (!it) return;
+    try {
+        const { ok, data } = await api('/api/order/remove', 'POST', { item_name: it.name });
+        if (ok) renderCart(data.cart);
+        else appendChat('waiter', data.message || 'Could not remove that item.');
+        await refreshState();
+    } catch (e) {
+        appendChat('waiter', 'Sorry, I could not reach the server.');
+    }
+}
+
+function clearCart() {
+    if (!currentTableNo) { appendChat('waiter', 'Pick your table first.'); return; }
+    sendChatText('/clear', true);
+}
+
+// ---------------------------------------------------------------
+// Checkout / payment modal
+// ---------------------------------------------------------------
+const FALLBACK_METHODS = [
+    { name: 'GCash', type: 'online', icon: '📱', label: 'E-wallet', note: 'Pay with GCash. Show your payment confirmation to the cashier.' },
+    { name: 'Cash', type: 'cash', icon: '💵', label: 'At the table', note: 'Please hand your cash to the server or cashier.' },
+    { name: 'BPI', type: 'online', icon: '🏦', label: 'Online banking', note: 'Pay with BPI. Show your payment confirmation to the cashier.' },
+    { name: 'Metrobank', type: 'online', icon: '🏦', label: 'Online banking', note: 'Pay with Metrobank. Show your payment confirmation to the cashier.' },
+    { name: 'Maribank', type: 'online', icon: '🏦', label: 'Digital bank', note: 'Pay with Maribank. Show your payment confirmation to the cashier.' },
+];
+
+async function loadPaymentMethods() {
+    try {
+        const { ok, data } = await api('/api/payment-methods');
+        paymentMethods = ok && data.methods && data.methods.length ? data.methods : FALLBACK_METHODS;
+    } catch (e) {
+        paymentMethods = FALLBACK_METHODS;
+    }
+}
+
+function openCheckout() {
+    if (!currentTableNo) { appendChat('waiter', 'Please pick your table first.'); return; }
+    if (!lastCart) { appendChat('waiter', 'Your cart is empty. Add something from the menu first.'); return; }
+    if (paying) return;
+
+    // Order summary
+    let sum = '<ul class="list-unstyled mb-2">';
+    lastCart.items.forEach(it => {
+        sum += `<li class="d-flex justify-content-between"><span>${it.quantity}x ${esc(it.name)}${it.instructions ? ' <em class="text-muted">(' + esc(it.instructions) + ')</em>' : ''}</span><span>${php(it.line_total)}</span></li>`;
+    });
+    sum += `</ul>
+        <div class="border-top pt-2">
+            <div class="d-flex justify-content-between"><span>Subtotal</span><span>${php(lastCart.subtotal)}</span></div>
+            <div class="d-flex justify-content-between"><span>Service fee (${Math.round((lastCart.service_fee_rate || 0) * 100)}%)</span><span>${php(lastCart.service_fee)}</span></div>
+            <div class="d-flex justify-content-between fw-bold fs-6"><span>Total</span><span>${php(lastCart.grand_total)}</span></div>
+        </div>`;
+    document.getElementById('paySummary').innerHTML = sum;
+
+    // Payment options, grouped
+    const groups = [
+        ['Online payment', paymentMethods.filter(m => m.type === 'online')],
+        ['Pay at the table', paymentMethods.filter(m => m.type !== 'online')],
+    ];
+    let html = '';
+    groups.forEach(([title, list]) => {
+        if (!list.length) return;
+        html += `<div class="pay-heading">${title}</div>`;
+        list.forEach(m => {
+            html += `
+                <label class="list-group-item pay-option d-flex align-items-center gap-3 p-2 px-3" data-method="${esc(m.name)}">
+                    <input class="form-check-input m-0" type="radio" name="payMethod" value="${esc(m.name)}">
+                    <span class="pay-icon">${m.icon || '💳'}</span>
+                    <span><span class="fw-semibold d-block">${esc(m.name)}</span><small class="text-muted">${esc(m.label || '')}</small></span>
+                </label>`;
+        });
+    });
+    const box = document.getElementById('payOptions');
+    box.innerHTML = html;
+    box.querySelectorAll('input[name="payMethod"]').forEach(r => r.addEventListener('change', () => selectMethod(r.value)));
+
+    selectedMethod = null;
+    document.getElementById('payNote').style.display = 'none';
+    const btn = document.getElementById('payConfirmBtn');
+    btn.disabled = true;
+    btn.textContent = 'Choose a payment method';
+
+    if (!payModal) payModal = new bootstrap.Modal(document.getElementById('payModal'));
+    payModal.show();
+}
+
+function selectMethod(name) {
+    selectedMethod = name;
+    document.querySelectorAll('.pay-option').forEach(l => l.classList.toggle('selected', l.dataset.method === name));
+    const m = paymentMethods.find(x => x.name === name) || {};
+    const note = document.getElementById('payNote');
+    note.textContent = m.note || '';
+    note.style.display = m.note ? 'block' : 'none';
+    const btn = document.getElementById('payConfirmBtn');
+    btn.disabled = false;
+    btn.textContent = `Confirm order · ${name} · ${php(lastCart ? lastCart.grand_total : 0)}`;
+}
+
+async function submitPayment() {
+    if (!selectedMethod || paying) return;
+    paying = true;
+    const btn = document.getElementById('payConfirmBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending to the kitchen…';
+    try {
+        const { data } = await api('/api/checkout', 'POST', { payment_method: selectedMethod });
+        if (payModal) payModal.hide();
+        const msg = data.reply || data.message || 'Something went wrong. Please try again.';
+        appendChat('waiter', msg);
+        speakResponse(data.confirmed ? `Your order has been sent to the kitchen. Payment method: ${selectedMethod}. Thank you!` : msg);
+    } catch (e) {
+        btn.disabled = false;
+        btn.textContent = `Confirm order · ${selectedMethod}`;
+        appendChat('waiter', 'Sorry, I could not reach the server. Please try again.');
+    } finally {
+        paying = false;
+    }
+    await refreshState();
+}
+
+async function resetCustomer() {
+    try { await api('/api/reset', 'POST', {}); } catch (e) {}
+    location.reload();
+}
+
+// ---------------------------------------------------------------
+// Voice input (Web Speech API: speech-to-text)
+// ---------------------------------------------------------------
+const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recognition = null;
+let listening = false;
+let recogLang = 'en-PH';       // falls back to en-US if the browser lacks it
+const DEFAULT_PLACEHOLDER = 'e.g. 2 cheeseburgers, no onions';
+
+function initVoiceInput() {
+    const btn = document.getElementById('micBtn');
+    if (!SpeechRec) {
+        btn.disabled = true;
+        btn.title = 'Voice input is not supported in this browser. Try Chrome, Edge or Safari.';
+        document.getElementById('autoSend').disabled = true;
+    }
+}
+
+function setMicUI(on) {
+    const btn = document.getElementById('micBtn');
+    btn.classList.toggle('listening', on);
+    btn.textContent = on ? '⏹' : '🎤';
+    btn.title = on ? 'Stop listening' : 'Speak your order';
+    document.getElementById('chatInput').placeholder = on ? 'Listening… speak your order' : DEFAULT_PLACEHOLDER;
+}
+
+function toggleMic() {
+    if (listening && recognition) { recognition.stop(); return; }
+    startListening();
+}
+
+function startListening() {
+    if (!SpeechRec || listening) return;
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();   // don't let the mic hear the waiter
+
+    const input = document.getElementById('chatInput');
+    const base = input.value.trim();
+    let finalText = '';
+    let failed = false;
+    let retryEnglishUS = false;
+
+    recognition = new SpeechRec();
+    recognition.lang = recogLang;
+    recognition.interimResults = true;
+    recognition.continuous = false;
+    recognition.maxAlternatives = 1;
+
+    recognition.onstart = () => { listening = true; setMicUI(true); };
+
+    recognition.onresult = (e) => {
+        let interim = '';
+        for (let i = e.resultIndex; i < e.results.length; i++) {
+            const t = e.results[i][0].transcript;
+            if (e.results[i].isFinal) finalText += t; else interim += t;
+        }
+        input.value = [base, (finalText + interim).trim()].filter(Boolean).join(' ');
+    };
+
+    recognition.onerror = (e) => {
+        failed = true;
+        if (e.error === 'language-not-supported' && recogLang !== 'en-US') {
+            recogLang = 'en-US'; retryEnglishUS = true; return;
+        }
+        const msgs = {
+            'not-allowed': 'Microphone access is blocked. Allow the microphone for this site in your browser settings, then try again.',
+            'service-not-allowed': 'Microphone access is blocked. Allow the microphone for this site in your browser settings, then try again.',
+            'no-speech': "I didn't hear anything. Tap the mic and try again.",
+            'audio-capture': 'No microphone was found. Please connect one and try again.',
+            'network': 'Voice recognition needs an internet connection. Please check your connection or type your order.',
+        };
+        if (e.error !== 'aborted' && msgs[e.error]) appendChat('waiter', msgs[e.error]);
+    };
+
+    recognition.onend = () => {
+        listening = false;
+        setMicUI(false);
+        if (retryEnglishUS) { startListening(); return; }
+        const text = input.value.trim();
+        if (!failed && text && document.getElementById('autoSend').checked) sendChatMessage();
+    };
+
+    try { recognition.start(); }
+    catch (err) { listening = false; setMicUI(false); }
+}
+
+// ---------------------------------------------------------------
+// Init
+// ---------------------------------------------------------------
+window.onload = async function () {
+    buildTableButtons();
+    initVoiceInput();
+    loadPaymentMethods();
+    appendChat('waiter', WELCOME);
+    checkStatus();
+    setInterval(checkStatus, 10000);      // badge recovers if Ollama starts later
+    await loadMenu();
+    await refreshState();
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

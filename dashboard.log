@@ -1,0 +1,1170 @@
+10:01:15 INFO    Ollama status: ONLINE 
+10:01:15 WARNING Port 8000 is not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+10:01:15 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8001  (Ctrl+C to stop)
+10:01:16 INFO    Self-check: server answers on http://127.0.0.1:8001 (OK)
+10:01:16 INFO    If your browser still shows nothing: try a private window, turn off VPN/proxy, or open the address in another browser.
+10:01:16 INFO    GET / -> 200 (0 ms)
+10:01:16 INFO    GET /api/greeting -> 200 (0 ms)
+10:01:17 INFO    GET /favicon.ico -> 204 (0 ms)
+10:01:29 INFO    customer: table 1
+10:01:29 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+10:01:29 INFO    POST /api/chat -> 200 (16 ms)
+10:02:42 INFO    customer: can i order the spaghetti Bolognese
+10:05:01 INFO    waiter (STATE_TAKING_ORDER): Certainly! The Spaghetti Bolognese is available for PHP 220.00. Would you like to order it?
+10:05:01 INFO    POST /api/chat -> 200 (139377 ms)
+10:06:02 INFO    customer: yes
+10:06:42 INFO    waiter (STATE_TAKING_ORDER): Your Spaghetti Bolognese has been added to your order. The subtotal is PHP 220.00, with a service fe
+10:06:42 INFO    POST /api/chat -> 200 (39900 ms)
+10:15:07 INFO    Ollama status: ONLINE 
+10:15:07 WARNING Port 8000 is not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+10:15:07 WARNING Port 8001 is not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+10:15:07 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8002  (Ctrl+C to stop)
+10:15:08 INFO    Self-check: server answers on http://127.0.0.1:8002 (OK)
+10:15:08 INFO    If your browser still shows nothing: try a private window, turn off VPN/proxy, or open the address in another browser.
+10:15:08 INFO    GET / -> 200 (0 ms)
+10:15:08 INFO    GET /api/greeting -> 200 (0 ms)
+10:15:08 INFO    GET /favicon.ico -> 204 (9 ms)
+10:15:17 INFO    customer: Table 1
+10:15:17 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+10:15:17 INFO    POST /api/chat -> 200 (18 ms)
+10:15:38 INFO    customer: table 3
+10:17:31 INFO    waiter (STATE_TAKING_ORDER): I'm sorry, I believe you meant to say "table 3". How may I assist you? Would you like to view the me
+10:17:31 INFO    POST /api/chat -> 200 (113498 ms)
+10:18:43 INFO    customer: can i order Garden salad and Chicken Adobo Rice
+10:19:01 INFO    waiter (STATE_TAKING_ORDER): {"add_item_to_order": {"item_name": "Garden Salad", "qty": 1}, "add_item_to_order": {"item_name": "C
+10:19:01 INFO    POST /api/chat -> 200 (17498 ms)
+10:26:35 INFO    customer: can you take my orders
+10:28:26 INFO    waiter (STATE_TAKING_ORDER): Sure thing! You'd like to order a Garden Salad and Chicken Adobo Rice. Would you like anything else,
+10:28:26 INFO    POST /api/chat -> 200 (110441 ms)
+10:29:02 INFO    customer: yes
+10:29:13 INFO    waiter (STATE_TAKING_ORDER): Great! You're ordered a Garden Salad and Chicken Adobo Rice. Is there anything else you'd like to ad
+10:29:13 INFO    POST /api/chat -> 200 (10319 ms)
+19:40:28 INFO    Ollama status: OFFLINE Ollama is not running. Start it with: ollama serve
+19:40:28 WARNING AI is unavailable: Ollama is not running. Start it with: ollama serve
+19:40:28 WARNING The dashboard will still start: table selection, the menu and the +/- buttons work without Ollama. Chat replies resume automatically once Ollama is running.
+19:40:28 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8000  (Ctrl+C to stop)
+19:40:29 INFO    GET / -> 200 (0 ms)
+19:40:29 INFO    GET /api/greeting -> 200 (0 ms)
+19:40:30 INFO    GET /favicon.ico -> 204 (4 ms)
+19:40:32 ERROR   Self-check FAILED: timed out - a firewall or security program may be blocking Python.
+19:40:38 INFO    customer: table 2
+19:40:38 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 2 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+19:40:38 INFO    POST /api/chat -> 200 (25 ms)
+19:41:20 INFO    customer: can i take the garden salad and chicken adobo rice
+19:41:25 WARNING LLM call failed: Ollama request failed: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+19:41:25 INFO    waiter (STATE_TAKING_ORDER, DEGRADED): Sorry, my ordering assistant is not responding right now. Your tab is safe - please try again in a m
+19:41:25 INFO    POST /api/chat -> 200 (4150 ms)
+19:42:00 INFO    Ollama status: ONLINE 
+19:42:00 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8000  (Ctrl+C to stop)
+19:42:01 INFO    Self-check: server answers on http://127.0.0.1:8000 (OK)
+19:42:01 INFO    If your browser still shows nothing: try a private window, turn off VPN/proxy, or open the address in another browser.
+19:42:01 INFO    GET / -> 200 (0 ms)
+19:42:01 INFO    GET /api/greeting -> 200 (0 ms)
+19:42:02 INFO    GET /favicon.ico -> 204 (6 ms)
+19:42:14 INFO    customer: table 3
+19:42:14 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 3 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+19:42:14 INFO    POST /api/chat -> 200 (21 ms)
+19:42:27 INFO    customer: menu
+19:44:29 WARNING LLM call failed: Ollama request failed: timed out
+19:44:29 INFO    waiter (STATE_TAKING_ORDER, DEGRADED): Sorry, my ordering assistant is not responding right now. Your tab is safe - please try again in a m
+19:44:29 INFO    POST /api/chat -> 200 (122402 ms)
+19:45:14 INFO    customer: One French fries instead, and an iced tea
+19:46:35 INFO    waiter (STATE_TAKING_ORDER): Your order has been updated. You now have one French fries and one iced tea. Your subtotal is now PH
+19:46:35 INFO    POST /api/chat -> 499 (81243 ms)
+19:46:40 INFO    Ollama status: ONLINE 
+19:46:40 WARNING Port 8000 is not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+19:46:40 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8001  (Ctrl+C to stop)
+19:46:41 INFO    Self-check: server answers on http://127.0.0.1:8001 (OK)
+19:46:41 INFO    If your browser still shows nothing: try a private window, turn off VPN/proxy, or open the address in another browser.
+19:46:41 INFO    GET / -> 200 (0 ms)
+19:46:42 INFO    GET /api/greeting -> 200 (0 ms)
+19:46:42 INFO    GET /favicon.ico -> 204 (0 ms)
+19:46:46 INFO    customer: Table 8
+19:46:46 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 8 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+19:46:46 INFO    POST /api/chat -> 200 (21 ms)
+19:47:25 INFO    customer: table 1
+19:49:08 INFO    waiter (STATE_TAKING_ORDER): I'm sorry, I believe you meant to say "Table 8". How may I assist you today? Would you like to view 
+19:49:08 INFO    POST /api/chat -> 200 (103034 ms)
+19:51:44 INFO    Ollama status: ONLINE 
+19:51:44 WARNING Port 8000 is not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+19:51:44 WARNING Port 8001 is not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+19:51:44 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8002  (Ctrl+C to stop)
+19:51:45 INFO    Self-check: server answers on http://127.0.0.1:8002 (OK)
+19:51:45 INFO    If your browser still shows nothing: try a private window, turn off VPN/proxy, or open the address in another browser.
+19:51:45 INFO    GET / -> 200 (1 ms)
+19:51:45 INFO    GET /api/greeting -> 200 (0 ms)
+19:51:46 INFO    GET /favicon.ico -> 204 (0 ms)
+19:51:52 INFO    customer: table 1
+19:51:52 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+19:51:52 INFO    POST /api/chat -> 200 (21 ms)
+19:51:57 INFO    customer: /menu
+19:51:57 INFO    waiter (STATE_TAKING_ORDER): MAINS
+19:51:57 INFO    POST /api/chat -> 200 (5 ms)
+19:52:29 INFO    customer: can i take cheeseburger and garden salad
+19:55:04 INFO    customer: /confirm
+19:55:15 INFO    waiter (STATE_TAKING_ORDER): Your cheeseburger and garden salad have been added to your order. Your subtotal is now PHP 275.00 wi
+19:55:15 INFO    POST /api/chat -> 499 (165440 ms)
+19:55:15 INFO    waiter (STATE_REVIEW): Here is your order for Table 1:
+19:55:15 INFO    POST /api/chat -> 200 (10844 ms)
+19:55:23 INFO    customer: /confirm
+19:55:23 INFO    waiter (STATE_GREETING): ================================================================
+19:55:23 INFO    POST /api/chat -> 200 (20 ms)
+19:56:01 INFO    customer: Table 4
+19:56:01 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 4 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+19:56:01 INFO    POST /api/chat -> 200 (14 ms)
+19:56:08 INFO    direct add 'Cheeseburger' -> ok
+19:56:08 INFO    POST /api/order/add -> 200 (14 ms)
+19:56:10 INFO    direct add 'Veggie Burger' -> ok
+19:56:10 INFO    POST /api/order/add -> 200 (16 ms)
+19:56:11 INFO    customer: /confirm
+19:56:11 INFO    waiter (STATE_REVIEW): Here is your order for Table 4:
+19:56:11 INFO    POST /api/chat -> 200 (5 ms)
+19:56:21 INFO    direct add 'Halo-Halo' -> ok
+19:56:21 INFO    POST /api/order/add -> 200 (15 ms)
+19:56:23 INFO    direct add 'Leche Flan' -> ok
+19:56:23 INFO    POST /api/order/add -> 200 (15 ms)
+19:56:27 INFO    customer: /clear
+19:56:27 INFO    waiter (STATE_TAKING_ORDER): No problem - I've cleared your tab. What would you like instead?
+19:56:27 INFO    POST /api/chat -> 200 (17 ms)
+19:56:30 INFO    direct add 'Garden Salad' -> ok
+19:56:30 INFO    POST /api/order/add -> 200 (15 ms)
+19:56:31 INFO    direct add 'French Fries' -> ok
+19:56:31 INFO    POST /api/order/add -> 200 (15 ms)
+19:56:32 INFO    customer: /confirm
+19:56:32 INFO    waiter (STATE_REVIEW): Here is your order for Table 4:
+19:56:32 INFO    POST /api/chat -> 200 (5 ms)
+19:56:35 INFO    customer: /clear
+19:56:35 INFO    waiter (STATE_TAKING_ORDER): No problem - I've cleared your tab. What would you like instead?
+19:56:35 INFO    POST /api/chat -> 200 (17 ms)
+19:56:51 INFO    customer: one cheeseburger
+19:58:53 WARNING LLM call failed: Ollama request failed: timed out
+19:58:53 INFO    waiter (STATE_TAKING_ORDER, DEGRADED): Sorry, my ordering assistant is not responding right now. Your tab is safe - please try again in a m
+19:58:53 INFO    POST /api/chat -> 499 (122044 ms)
+20:27:28 INFO    Ollama status: OFFLINE Ollama is not running. Start it with: ollama serve
+20:27:28 WARNING AI is unavailable: Ollama is not running. Start it with: ollama serve
+20:27:28 WARNING The dashboard will still start: table selection, the menu and the +/- buttons work without Ollama. Chat replies resume automatically once Ollama is running.
+20:27:28 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8000  (Ctrl+C to stop)
+20:27:29 INFO    GET / -> 200 (11 ms)
+20:27:29 INFO    GET /api/greeting -> 200 (0 ms)
+20:27:30 INFO    GET /favicon.ico -> 204 (0 ms)
+20:27:31 ERROR   Self-check FAILED: timed out - a firewall or security program may be blocking Python.
+20:27:43 INFO    customer: table 1
+20:27:43 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+20:27:43 INFO    POST /api/chat -> 200 (24 ms)
+20:27:49 INFO    direct add 'Cheeseburger' -> ok
+20:27:49 INFO    POST /api/order/add -> 200 (17 ms)
+20:27:50 INFO    customer: /confirm
+20:27:50 INFO    waiter (STATE_REVIEW): Here is your order for Table 1:
+20:27:50 INFO    POST /api/chat -> 200 (4 ms)
+20:29:46 INFO    customer: /confirm
+20:29:46 INFO    waiter (STATE_GREETING): ================================================================
+20:29:46 INFO    POST /api/chat -> 200 (19 ms)
+20:30:41 INFO    customer: table 2
+20:30:41 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 2 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+20:30:41 INFO    POST /api/chat -> 200 (15 ms)
+20:30:46 INFO    direct add 'Pesto Pasta' -> ok
+20:30:46 INFO    POST /api/order/add -> 200 (15 ms)
+20:30:47 INFO    customer: /confirm
+20:30:47 INFO    waiter (STATE_REVIEW): Here is your order for Table 2:
+20:30:47 INFO    POST /api/chat -> 200 (4 ms)
+20:31:08 INFO    Ollama status: ONLINE 
+20:31:08 WARNING Port 8000 is not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+20:31:08 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8001  (Ctrl+C to stop)
+20:31:08 INFO    Self-check: server answers on http://127.0.0.1:8001 (OK)
+20:31:08 INFO    If your browser still shows nothing: try a private window, turn off VPN/proxy, or open the address in another browser.
+20:31:09 INFO    GET / -> 200 (0 ms)
+20:31:09 INFO    GET /api/greeting -> 200 (0 ms)
+20:31:09 INFO    GET /favicon.ico -> 204 (0 ms)
+20:31:16 INFO    customer: table 2
+20:31:16 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 2 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+20:31:16 INFO    POST /api/chat -> 200 (19 ms)
+20:31:23 INFO    direct add 'Chicken Adobo Rice' -> ok
+20:31:23 INFO    POST /api/order/add -> 200 (15 ms)
+20:31:27 INFO    customer: /clear
+20:31:27 INFO    waiter (STATE_TAKING_ORDER): No problem - I've cleared your tab. What would you like instead?
+20:31:27 INFO    POST /api/chat -> 200 (20 ms)
+20:31:35 INFO    direct add 'Cheeseburger' -> ok
+20:31:35 INFO    POST /api/order/add -> 200 (14 ms)
+20:31:36 INFO    direct add 'French Fries' -> ok
+20:31:36 INFO    POST /api/order/add -> 200 (16 ms)
+20:31:37 INFO    customer: /confirm
+20:31:37 INFO    waiter (STATE_REVIEW): Here is your order for Table 2:
+20:31:37 INFO    POST /api/chat -> 200 (5 ms)
+20:33:01 INFO    customer: /confirm
+20:33:01 INFO    waiter (STATE_GREETING): ================================================================
+20:33:01 INFO    POST /api/chat -> 200 (22 ms)
+20:57:27 INFO    Ollama status: ONLINE 
+20:57:27 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8000 (Ctrl+C to stop)
+20:57:28 INFO    Self-check: server answers on http://127.0.0.1:8000 (OK)
+20:57:28 INFO    GET / -> 200 (0 ms)
+20:57:28 INFO    GET /api/greeting -> 200 (0 ms)
+20:57:28 INFO    GET /favicon.ico -> 204 (28 ms)
+20:57:37 INFO    customer: table 1
+20:57:37 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+20:57:37 INFO    POST /api/chat -> 200 (19 ms)
+20:58:26 INFO    customer: one cheeseburger
+20:58:55 INFO    waiter (STATE_TAKING_ORDER): TOOL_RESULT
+20:58:55 INFO    POST /api/chat -> 200 (28665 ms)
+21:01:39 INFO    Ollama status: ONLINE 
+21:01:39 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+21:01:39 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8001 (Ctrl+C to stop)
+21:01:40 INFO    Self-check: server answers on http://127.0.0.1:8001 (OK)
+21:01:40 INFO    GET / -> 200 (0 ms)
+21:01:40 INFO    GET /api/greeting -> 200 (0 ms)
+21:01:41 INFO    GET /favicon.ico -> 204 (0 ms)
+21:02:02 INFO    customer: Table 1
+21:02:02 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+21:02:02 INFO    POST /api/chat -> 200 (19 ms)
+21:02:18 INFO    customer: 1 cheeseburger
+21:02:22 INFO    waiter (STATE_TAKING_ORDER): TOOL_RESULT
+21:02:22 INFO    POST /api/chat -> 200 (4319 ms)
+21:25:12 INFO    Ollama status: ONLINE 
+21:25:12 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+21:25:12 WARNING Port 8001 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+21:25:12 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8002 (Ctrl+C to stop)
+21:25:13 INFO    GET / -> 200 (0 ms)
+21:25:13 INFO    GET /favicon.ico -> 204 (0 ms)
+21:25:14 ERROR   Unhandled error on GET /api/health
+Traceback (most recent call last):
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 345, in _handle
+    self._json(404, {"error": "http_error", "message": f"No such page: {path}"})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 299, in _json
+    raise Exception("Bad Content-Length header.")
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 296, in _send
+    try:
+  File "C:\Users\kckpi\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+21:31:16 INFO    Ollama status: ONLINE 
+21:31:16 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8000 (Ctrl+C to stop)
+21:31:17 INFO    GET / -> 200 (1 ms)
+21:31:17 INFO    GET /api/greeting -> 200 (0 ms)
+21:31:18 INFO    GET /favicon.ico -> 204 (0 ms)
+21:32:29 INFO    customer: Table 1
+21:32:29 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+21:32:29 INFO    POST /api/chat -> 200 (20 ms)
+21:32:59 INFO    direct add 'Cheeseburger' -> ok
+21:32:59 INFO    POST /api/order/add -> 200 (18 ms)
+21:41:22 INFO    Ollama status: ONLINE 
+21:41:22 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+21:41:22 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8001 (Ctrl+C to stop)
+21:41:23 INFO    GET / -> 200 (0 ms)
+21:41:23 INFO    GET /api/greeting -> 200 (0 ms)
+21:41:23 INFO    GET /favicon.ico -> 204 (0 ms)
+21:41:25 INFO    customer: Table 1
+21:41:25 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+21:41:25 INFO    POST /api/chat -> 200 (16 ms)
+21:41:27 INFO    direct add 'Cheeseburger' -> ok
+21:41:27 INFO    POST /api/order/add -> 200 (20 ms)
+21:41:28 INFO    customer: /confirm
+21:41:28 INFO    waiter (STATE_REVIEW): Here is your order for Table 1:
+21:41:28 INFO    POST /api/chat -> 200 (5 ms)
+21:41:34 INFO    customer: /clear
+21:41:34 INFO    waiter (STATE_TAKING_ORDER): No problem - I've cleared your tab. What would you like instead?
+21:41:34 INFO    POST /api/chat -> 200 (20 ms)
+21:41:47 INFO    customer: can i take pesto pasta
+21:42:09 INFO    waiter (STATE_TAKING_ORDER): The customer's order is empty. Is there anything else you would like to add?
+21:42:09 INFO    POST /api/chat -> 200 (22106 ms)
+21:42:32 INFO    customer: onion rings
+21:42:42 INFO    waiter (STATE_TAKING_ORDER): I'm sorry, but the Onion Rings are currently sold out. We have French Fries available instead, price
+21:42:42 INFO    POST /api/chat -> 200 (10825 ms)
+21:43:00 INFO    customer: then 1 french fries
+21:43:14 INFO    waiter (STATE_TAKING_ORDER): Your order is ready. Here are the details:
+21:43:14 INFO    POST /api/chat -> 200 (13999 ms)
+21:43:55 INFO    customer: /confirm
+21:43:55 INFO    waiter (STATE_REVIEW): Here is your order for Table 1:
+21:43:55 INFO    POST /api/chat -> 200 (5 ms)
+21:44:04 INFO    customer: /confirm
+21:44:04 INFO    waiter (STATE_GREETING): ================================================================
+21:44:04 INFO    POST /api/chat -> 200 (21 ms)
+21:45:11 INFO    POST /api/order/add -> 409 (0 ms)
+21:45:13 INFO    POST /api/order/add -> 409 (0 ms)
+21:45:14 INFO    POST /api/order/add -> 409 (0 ms)
+21:45:16 INFO    POST /api/order/add -> 409 (0 ms)
+21:45:18 INFO    customer: Table 1
+21:45:18 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+21:45:18 INFO    POST /api/chat -> 200 (17 ms)
+21:45:21 INFO    direct add 'Veggie Burger' -> ok
+21:45:21 INFO    POST /api/order/add -> 200 (18 ms)
+21:45:23 INFO    direct add 'Garden Salad' -> ok
+21:45:23 INFO    POST /api/order/add -> 200 (19 ms)
+21:45:26 INFO    customer: /confirm
+21:45:26 INFO    waiter (STATE_REVIEW): Here is your order for Table 1:
+21:45:26 INFO    POST /api/chat -> 200 (8 ms)
+21:46:32 INFO    customer: /confirm
+21:46:32 INFO    waiter (STATE_GREETING): ================================================================
+21:46:32 INFO    POST /api/chat -> 200 (22 ms)
+21:48:30 INFO    customer: table 8
+21:48:30 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 8 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+21:48:30 INFO    POST /api/chat -> 200 (20 ms)
+21:48:51 INFO    customer: 1 bottled water and chicken adobo rice
+21:49:23 INFO    waiter (STATE_REVIEW): Here is your order for Table 8:
+21:49:23 ERROR   Unhandled error on POST /api/chat
+Traceback (most recent call last):
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 339, in _handle
+    self._json(code, payload, extra)
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 293, in _json
+    self._send(code, json.dumps(obj, ensure_ascii=False).encode("utf-8"), "application/json", extra)
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 290, in _send
+    self.wfile.write(body)
+  File "C:\Users\kckpi\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+21:49:23 INFO    POST /api/chat -> 500 (31848 ms)
+21:49:24 INFO    customer: /confirm
+21:49:24 INFO    waiter (STATE_GREETING): ================================================================
+21:49:24 INFO    POST /api/chat -> 200 (22 ms)
+21:52:16 INFO    session reset
+21:52:16 INFO    POST /api/reset -> 200 (0 ms)
+21:52:17 INFO    session reset
+21:52:17 INFO    POST /api/reset -> 200 (0 ms)
+21:55:20 INFO    POST /api/order/add -> 409 (0 ms)
+21:55:21 INFO    POST /api/order/add -> 409 (0 ms)
+21:55:22 INFO    POST /api/order/add -> 409 (0 ms)
+21:59:11 INFO    customer: Table 1
+21:59:11 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+21:59:11 INFO    POST /api/chat -> 200 (19 ms)
+21:59:13 INFO    direct add 'Cheeseburger' -> ok
+21:59:13 INFO    POST /api/order/add -> 200 (20 ms)
+21:59:17 INFO    direct add 'French Fries' -> ok
+21:59:17 INFO    POST /api/order/add -> 200 (18 ms)
+21:59:31 INFO    customer: /confirm
+21:59:31 INFO    waiter (STATE_REVIEW): Here is your order for Table 1:
+21:59:31 INFO    POST /api/chat -> 200 (5 ms)
+22:02:07 INFO    customer: /clear
+22:02:07 INFO    waiter (STATE_TAKING_ORDER): No problem - I've cleared your tab. What would you like instead?
+22:02:07 INFO    POST /api/chat -> 200 (18 ms)
+22:12:20 INFO    Ollama status: ONLINE 
+22:12:20 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8000 (Ctrl+C to stop)
+22:12:21 INFO    GET / -> 200 (1 ms)
+22:12:22 INFO    GET /api/greeting -> 200 (1 ms)
+22:12:22 INFO    GET /favicon.ico -> 204 (0 ms)
+22:45:33 INFO    Ollama status: ONLINE 
+22:45:33 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+22:45:33 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8001 (Ctrl+C to stop)
+22:45:34 INFO    GET / -> 200 (70 ms)
+22:45:34 INFO    GET /api/greeting -> 200 (0 ms)
+22:45:35 INFO    GET /favicon.ico -> 204 (0 ms)
+22:46:48 INFO    GET / -> 200 (0 ms)
+22:46:48 INFO    GET /api/greeting -> 200 (0 ms)
+22:46:48 INFO    GET /favicon.ico -> 204 (0 ms)
+22:46:49 INFO    GET / -> 200 (0 ms)
+22:46:49 INFO    GET /api/greeting -> 200 (0 ms)
+22:46:49 INFO    GET /favicon.ico -> 204 (0 ms)
+22:46:50 INFO    GET / -> 200 (0 ms)
+22:46:50 INFO    GET /api/greeting -> 200 (0 ms)
+22:46:50 INFO    GET /favicon.ico -> 204 (0 ms)
+22:46:50 INFO    GET / -> 200 (0 ms)
+22:46:50 INFO    GET /api/greeting -> 200 (0 ms)
+22:46:50 INFO    GET /favicon.ico -> 204 (0 ms)
+22:49:59 INFO    Ollama status: ONLINE 
+22:49:59 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+22:49:59 WARNING Port 8001 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+22:49:59 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8002 (Ctrl+C to stop)
+22:50:00 INFO    GET / -> 200 (0 ms)
+22:50:00 INFO    GET /api/greeting -> 200 (0 ms)
+22:50:01 INFO    GET /favicon.ico -> 204 (0 ms)
+22:50:01 INFO    GET /images/cheeseburger.jpg -> 200 (12 ms)
+22:50:01 INFO    GET /images/veggie-burger.jpg -> 200 (13 ms)
+22:50:01 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (12 ms)
+22:50:01 INFO    GET /images/garden-salad.jpg -> 200 (14 ms)
+22:54:40 INFO    Ollama status: ONLINE 
+22:54:40 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+22:54:40 WARNING Port 8001 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+22:54:40 WARNING Port 8002 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8003
+22:54:40 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8003 (Ctrl+C to stop)
+22:54:41 INFO    GET / -> 200 (0 ms)
+22:54:41 INFO    GET /api/greeting -> 200 (0 ms)
+22:54:41 INFO    GET /favicon.ico -> 204 (0 ms)
+22:54:41 INFO    GET /images/cheeseburger.jpg -> 200 (0 ms)
+22:54:41 INFO    GET /images/veggie-burger.jpg -> 200 (0 ms)
+22:54:41 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (0 ms)
+22:54:41 INFO    GET /images/garden-salad.jpg -> 200 (0 ms)
+23:19:14 INFO    GET /images/halo-halo.jpg -> 200 (0 ms)
+23:19:55 INFO    GET /images/cola.jpg -> 200 (0 ms)
+23:20:55 INFO    GET /images/iced-tea.jpg -> 200 (0 ms)
+23:20:55 INFO    GET /images/bottled-water.jpg -> 200 (0 ms)
+23:20:55 INFO    GET /images/leche-flan.jpg -> 200 (0 ms)
+23:21:55 INFO    GET /images/onion-rings.jpg -> 200 (1 ms)
+23:21:55 INFO    GET /images/pesto-pasta.jpg -> 200 (2 ms)
+23:21:55 INFO    GET /images/matcha-sea-salt.jpg -> 200 (1 ms)
+23:22:25 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (0 ms)
+23:22:59 INFO    Ollama status: ONLINE 
+23:22:59 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+23:22:59 WARNING Port 8001 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+23:22:59 WARNING Port 8002 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8003
+23:22:59 WARNING Port 8003 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8004
+23:22:59 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8004 (Ctrl+C to stop)
+23:23:00 INFO    GET / -> 200 (0 ms)
+23:23:00 INFO    GET /api/greeting -> 200 (0 ms)
+23:23:00 INFO    GET /favicon.ico -> 204 (0 ms)
+23:23:00 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (1 ms)
+23:23:00 INFO    GET /images/veggie-burger.jpg -> 200 (1 ms)
+23:23:00 INFO    GET /images/cheeseburger.jpg -> 200 (2 ms)
+23:23:00 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (2 ms)
+23:23:00 INFO    GET /images/onion-rings.jpg -> 200 (1 ms)
+23:23:00 INFO    GET /images/pesto-pasta.jpg -> 200 (11 ms)
+23:23:00 INFO    GET /images/garden-salad.jpg -> 200 (8 ms)
+23:23:00 INFO    GET /images/iced-tea.jpg -> 200 (2 ms)
+23:23:00 INFO    GET /images/cola.jpg -> 200 (0 ms)
+23:23:00 INFO    GET /images/bottled-water.jpg -> 200 (2 ms)
+23:23:00 INFO    GET /images/matcha-sea-salt.jpg -> 200 (0 ms)
+23:23:01 INFO    GET /images/leche-flan.jpg -> 200 (2 ms)
+23:23:01 INFO    GET /images/halo-halo.jpg -> 200 (0 ms)
+23:23:57 INFO    GET /images/mango-smoothie.jpg -> 200 (0 ms)
+23:24:41 INFO    GET /images/french-fries.jpg -> 200 (0 ms)
+23:25:00 INFO    Ollama status: ONLINE 
+23:25:00 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+23:25:00 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8001 (Ctrl+C to stop)
+23:25:01 INFO    GET / -> 200 (0 ms)
+23:25:01 INFO    GET /api/greeting -> 200 (0 ms)
+23:25:01 INFO    GET /favicon.ico -> 204 (0 ms)
+23:25:01 INFO    GET /images/cheeseburger.jpg -> 200 (2 ms)
+23:25:01 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (2 ms)
+23:25:01 INFO    GET /images/veggie-burger.jpg -> 200 (2 ms)
+23:25:01 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (2 ms)
+23:25:01 INFO    GET /images/french-fries.jpg -> 200 (0 ms)
+23:25:01 INFO    GET /images/pesto-pasta.jpg -> 200 (11 ms)
+23:25:01 INFO    GET /images/garden-salad.jpg -> 200 (3 ms)
+23:25:01 INFO    GET /images/iced-tea.jpg -> 200 (2 ms)
+23:25:01 INFO    GET /images/onion-rings.jpg -> 200 (5 ms)
+23:25:01 INFO    GET /images/mango-smoothie.jpg -> 200 (2 ms)
+23:25:01 INFO    GET /images/cola.jpg -> 200 (1 ms)
+23:25:01 INFO    GET /images/bottled-water.jpg -> 200 (0 ms)
+23:25:01 INFO    GET /images/matcha-sea-salt.jpg -> 200 (2 ms)
+23:25:01 INFO    GET /images/leche-flan.jpg -> 200 (1 ms)
+23:25:01 INFO    GET /images/halo-halo.jpg -> 200 (0 ms)
+23:25:30 INFO    customer: table 3
+23:25:30 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 3 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+23:25:30 INFO    POST /api/chat -> 200 (20 ms)
+23:25:36 INFO    direct add 'Cheeseburger' -> ok
+23:25:36 INFO    POST /api/order/add -> 200 (17 ms)
+23:25:36 INFO    direct add 'Veggie Burger' -> ok
+23:25:36 INFO    POST /api/order/add -> 200 (16 ms)
+23:25:39 INFO    customer: /confirm
+23:25:39 INFO    waiter (STATE_REVIEW): Here is your order for Table 3:
+23:25:39 INFO    POST /api/chat -> 200 (5 ms)
+23:25:48 INFO    customer: yes
+23:25:48 INFO    waiter (STATE_GREETING): ================================================================
+23:25:48 INFO    POST /api/chat -> 200 (17 ms)
+23:26:11 INFO    customer: 2 halo-halo
+23:26:11 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 2 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+23:26:11 INFO    POST /api/chat -> 200 (17 ms)
+23:26:28 INFO    customer: 2 halo-halo
+23:26:55 INFO    waiter (STATE_TAKING_ORDER): The quantity for Halo-Halo must be a positive integer. Please try again with a valid quantity.
+23:26:55 ERROR   Unhandled error on POST /api/chat
+Traceback (most recent call last):
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 340, in _handle
+    self._json(code, payload, extra)
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 294, in _json
+    self._send(code, json.dumps(obj, ensure_ascii=False).encode("utf-8"), "application/json", extra)
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 291, in _send
+    self.wfile.write(body)
+  File "C:\Users\kckpi\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+23:26:55 INFO    POST /api/chat -> 500 (27072 ms)
+23:27:06 INFO    customer: yes
+23:27:14 INFO    waiter (STATE_TAKING_ORDER): The quantity for Halo-Halo must be a positive integer. Please try again with a valid quantity.
+23:27:14 INFO    POST /api/chat -> 200 (7860 ms)
+23:27:28 INFO    customer: two halo-halo
+23:27:37 INFO    waiter (STATE_TAKING_ORDER): The quantity for Halo-Halo must be a positive integer. Please try again with a valid quantity.
+23:27:37 INFO    POST /api/chat -> 200 (8726 ms)
+23:28:15 INFO    direct add 'Halo-Halo' -> ok
+23:28:15 INFO    POST /api/order/add -> 200 (15 ms)
+23:28:17 INFO    customer: /confirm
+23:28:17 INFO    waiter (STATE_REVIEW): Here is your order for Table 2:
+23:28:17 INFO    POST /api/chat -> 200 (8 ms)
+23:28:20 INFO    direct add 'Bottled Water' -> ok
+23:28:20 INFO    POST /api/order/add -> 200 (17 ms)
+23:28:22 INFO    customer: /confirm
+23:28:22 INFO    waiter (STATE_REVIEW): Here is your order for Table 2:
+23:28:22 INFO    POST /api/chat -> 200 (5 ms)
+23:28:24 INFO    customer: /confirm
+23:28:24 INFO    waiter (STATE_GREETING): ================================================================
+23:28:24 INFO    POST /api/chat -> 200 (19 ms)
+23:28:59 INFO    customer: Table 6
+23:28:59 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 6 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+23:28:59 INFO    POST /api/chat -> 200 (20 ms)
+23:29:08 INFO    customer: add 2 halo-halo
+23:29:19 INFO    waiter (STATE_TAKING_ORDER): The quantity for halo-halo must be a positive integer. Please try again with a valid quantity.
+23:29:19 INFO    POST /api/chat -> 200 (11689 ms)
+23:37:24 INFO    Ollama status: ONLINE 
+23:37:24 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+23:37:24 WARNING Port 8001 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+23:37:24 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8002 (Ctrl+C to stop)
+23:37:25 INFO    GET / -> 200 (0 ms)
+23:37:25 INFO    GET /api/greeting -> 200 (0 ms)
+23:37:26 INFO    GET /favicon.ico -> 204 (0 ms)
+23:37:26 INFO    GET /images/veggie-burger.jpg -> 200 (1 ms)
+23:37:26 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (4 ms)
+23:37:26 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (5 ms)
+23:37:26 INFO    GET /images/cheeseburger.jpg -> 200 (7 ms)
+23:37:26 INFO    GET /images/pesto-pasta.jpg -> 200 (8 ms)
+23:37:26 INFO    GET /images/french-fries.jpg -> 200 (14 ms)
+23:37:26 INFO    GET /images/garden-salad.jpg -> 200 (2 ms)
+23:37:26 INFO    GET /images/onion-rings.jpg -> 200 (6 ms)
+23:37:26 INFO    GET /images/iced-tea.jpg -> 200 (2 ms)
+23:37:26 INFO    GET /images/mango-smoothie.jpg -> 200 (4 ms)
+23:37:26 INFO    GET /images/cola.jpg -> 200 (1 ms)
+23:37:26 INFO    GET /images/bottled-water.jpg -> 200 (2 ms)
+23:37:26 INFO    GET /images/matcha-sea-salt.jpg -> 200 (2 ms)
+23:37:26 INFO    GET /images/leche-flan.jpg -> 200 (3 ms)
+23:37:26 INFO    GET /images/halo-halo.jpg -> 200 (1 ms)
+23:37:31 INFO    customer: Table 2
+23:37:31 INFO    waiter (STATE_TAKING_ORDER): Great, Table 2! What can I get started for you today?
+23:37:31 INFO    POST /api/chat -> 200 (41 ms)
+23:37:39 INFO    customer: add 2 cheesebuger
+23:38:05 INFO    waiter (STATE_TAKING_ORDER): json
+23:38:05 ERROR   Unhandled error on POST /api/chat
+Traceback (most recent call last):
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 340, in _handle
+    self._json(code, payload, extra)
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 294, in _json
+    self._send(code, json.dumps(obj, ensure_ascii=False).encode("utf-8"), "application/json", extra)
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 291, in _send
+    self.wfile.write(body)
+  File "C:\Users\kckpi\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+23:38:05 INFO    POST /api/chat -> 500 (25726 ms)
+23:38:11 INFO    direct add 'Cheeseburger' -> ok
+23:38:11 INFO    POST /api/order/add -> 200 (13 ms)
+23:38:12 INFO    customer: /confirm
+23:38:12 INFO    waiter (STATE_CONFIRMED): Order confirmed for Table 2! Thank you for dining with us.
+23:38:12 INFO    POST /api/chat -> 200 (16 ms)
+23:38:14 INFO    customer: /confirm
+23:38:14 INFO    waiter (STATE_CONFIRMED): Order confirmed for Table 2! Thank you for dining with us.
+23:38:14 INFO    POST /api/chat -> 200 (3 ms)
+23:38:15 INFO    customer: /confirm
+23:38:15 INFO    waiter (STATE_CONFIRMED): Order confirmed for Table 2! Thank you for dining with us.
+23:38:15 INFO    POST /api/chat -> 200 (3 ms)
+23:38:16 INFO    customer: /confirm
+23:38:16 INFO    waiter (STATE_CONFIRMED): Order confirmed for Table 2! Thank you for dining with us.
+23:38:16 INFO    POST /api/chat -> 200 (3 ms)
+23:38:56 INFO    Ollama status: ONLINE 
+23:38:56 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+23:38:56 WARNING Port 8001 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+23:38:56 WARNING Port 8002 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8003
+23:38:56 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8003 (Ctrl+C to stop)
+23:38:57 INFO    GET / -> 200 (1 ms)
+23:38:57 INFO    GET /api/greeting -> 200 (0 ms)
+23:38:57 INFO    GET /favicon.ico -> 204 (0 ms)
+23:38:57 INFO    GET /images/veggie-burger.jpg -> 200 (1 ms)
+23:38:57 INFO    GET /images/cheeseburger.jpg -> 200 (4 ms)
+23:38:57 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (3 ms)
+23:38:57 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (6 ms)
+23:38:57 INFO    GET /images/french-fries.jpg -> 200 (3 ms)
+23:38:57 INFO    GET /images/pesto-pasta.jpg -> 200 (6 ms)
+23:38:57 INFO    GET /images/garden-salad.jpg -> 200 (6 ms)
+23:38:57 INFO    GET /images/onion-rings.jpg -> 200 (4 ms)
+23:38:57 INFO    GET /images/iced-tea.jpg -> 200 (11 ms)
+23:38:57 INFO    GET /images/mango-smoothie.jpg -> 200 (10 ms)
+23:38:57 INFO    GET /images/cola.jpg -> 200 (0 ms)
+23:38:57 INFO    GET /images/matcha-sea-salt.jpg -> 200 (1 ms)
+23:38:57 INFO    GET /images/leche-flan.jpg -> 200 (1 ms)
+23:38:57 INFO    GET /images/bottled-water.jpg -> 200 (5 ms)
+23:38:57 INFO    GET /images/halo-halo.jpg -> 200 (2 ms)
+23:39:25 INFO    customer: table 3
+23:39:25 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 3 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+23:39:25 INFO    POST /api/chat -> 200 (24 ms)
+23:39:49 INFO    customer: can i get 2 cheeseburger
+23:40:20 INFO    waiter (STATE_TAKING_ORDER): The quantity for the cheeseburger must be a positive integer. Please try again with a valid quantity
+23:40:20 ERROR   Unhandled error on POST /api/chat
+Traceback (most recent call last):
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 340, in _handle
+    self._json(code, payload, extra)
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 294, in _json
+    self._send(code, json.dumps(obj, ensure_ascii=False).encode("utf-8"), "application/json", extra)
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 291, in _send
+    self.wfile.write(body)
+  File "C:\Users\kckpi\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+23:40:20 INFO    POST /api/chat -> 500 (30884 ms)
+23:40:58 INFO    Ollama status: ONLINE 
+23:40:58 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+23:40:58 WARNING Port 8001 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+23:40:58 WARNING Port 8002 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8003
+23:40:58 WARNING Port 8003 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8004
+23:40:58 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8004 (Ctrl+C to stop)
+23:40:59 INFO    GET / -> 200 (0 ms)
+23:40:59 INFO    GET /api/greeting -> 200 (0 ms)
+23:40:59 INFO    GET /favicon.ico -> 204 (0 ms)
+23:40:59 INFO    GET /images/cheeseburger.jpg -> 200 (3 ms)
+23:40:59 INFO    GET /images/veggie-burger.jpg -> 200 (3 ms)
+23:40:59 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (2 ms)
+23:40:59 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (2 ms)
+23:40:59 INFO    GET /images/french-fries.jpg -> 200 (2 ms)
+23:40:59 INFO    GET /images/pesto-pasta.jpg -> 200 (7 ms)
+23:40:59 INFO    GET /images/garden-salad.jpg -> 200 (2 ms)
+23:40:59 INFO    GET /images/onion-rings.jpg -> 200 (2 ms)
+23:40:59 INFO    GET /images/iced-tea.jpg -> 200 (1 ms)
+23:40:59 INFO    GET /images/cola.jpg -> 200 (6 ms)
+23:40:59 INFO    GET /images/mango-smoothie.jpg -> 200 (20 ms)
+23:40:59 INFO    GET /images/bottled-water.jpg -> 200 (4 ms)
+23:40:59 INFO    GET /images/halo-halo.jpg -> 200 (1 ms)
+23:40:59 INFO    GET /images/matcha-sea-salt.jpg -> 200 (3 ms)
+23:40:59 INFO    GET /images/leche-flan.jpg -> 200 (5 ms)
+23:42:57 INFO    customer: Table 1
+23:42:57 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+23:42:57 INFO    POST /api/chat -> 200 (24 ms)
+23:44:34 INFO    Ollama status: ONLINE 
+23:44:34 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+23:44:34 WARNING Port 8001 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+23:44:34 WARNING Port 8002 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8003
+23:44:34 WARNING Port 8003 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8004
+23:44:34 WARNING Port 8004 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8005
+23:44:34 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8005 (Ctrl+C to stop)
+23:44:35 INFO    GET / -> 200 (0 ms)
+23:44:36 INFO    GET /api/greeting -> 200 (2 ms)
+23:44:36 INFO    GET /favicon.ico -> 204 (0 ms)
+23:44:36 INFO    GET /images/cheeseburger.jpg -> 200 (2 ms)
+23:44:36 INFO    GET /images/veggie-burger.jpg -> 200 (2 ms)
+23:44:36 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (3 ms)
+23:44:36 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (1 ms)
+23:44:36 INFO    GET /images/french-fries.jpg -> 200 (2 ms)
+23:44:36 INFO    GET /images/garden-salad.jpg -> 200 (4 ms)
+23:44:36 INFO    GET /images/pesto-pasta.jpg -> 200 (12 ms)
+23:44:36 INFO    GET /images/onion-rings.jpg -> 200 (5 ms)
+23:44:36 INFO    GET /images/iced-tea.jpg -> 200 (1 ms)
+23:44:36 INFO    GET /images/mango-smoothie.jpg -> 200 (1 ms)
+23:44:36 INFO    GET /images/cola.jpg -> 200 (2 ms)
+23:44:36 INFO    GET /images/bottled-water.jpg -> 200 (4 ms)
+23:44:36 INFO    GET /images/matcha-sea-salt.jpg -> 200 (1 ms)
+23:44:36 INFO    GET /images/leche-flan.jpg -> 200 (0 ms)
+23:44:36 INFO    GET /images/halo-halo.jpg -> 200 (1 ms)
+23:44:43 INFO    customer: Table 1
+23:44:43 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+23:44:43 INFO    POST /api/chat -> 200 (27 ms)
+23:44:52 INFO    customer: can i get 1 cheeseburger
+23:45:12 INFO    waiter (STATE_TAKING_ORDER): The quantity for the cheeseburger must be a positive integer. Please try again with a valid quantity
+23:45:12 INFO    POST /api/chat -> 200 (19844 ms)
+08:38:20 INFO    Ollama status: ONLINE 
+08:38:20 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8000 (Ctrl+C to stop)
+08:38:22 INFO    GET / -> 200 (1 ms)
+08:38:22 INFO    GET /api/greeting -> 200 (0 ms)
+08:38:22 INFO    GET /favicon.ico -> 204 (0 ms)
+08:38:22 INFO    GET /images/cheeseburger.jpg -> 200 (1 ms)
+08:38:22 INFO    GET /images/veggie-burger.jpg -> 200 (1 ms)
+08:38:22 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (20 ms)
+08:38:22 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (10 ms)
+08:38:22 INFO    GET /images/pesto-pasta.jpg -> 200 (4 ms)
+08:38:22 INFO    GET /images/french-fries.jpg -> 200 (2 ms)
+08:38:22 INFO    GET /images/garden-salad.jpg -> 200 (3 ms)
+08:38:22 INFO    GET /images/onion-rings.jpg -> 200 (2 ms)
+08:38:22 INFO    GET /images/iced-tea.jpg -> 200 (1 ms)
+08:38:22 INFO    GET /images/mango-smoothie.jpg -> 200 (1 ms)
+08:38:22 INFO    GET /images/cola.jpg -> 200 (1 ms)
+08:38:22 INFO    GET /images/matcha-sea-salt.jpg -> 200 (2 ms)
+08:38:22 INFO    GET /images/bottled-water.jpg -> 200 (5 ms)
+08:38:22 INFO    GET /images/leche-flan.jpg -> 200 (1 ms)
+08:38:22 INFO    GET /images/halo-halo.jpg -> 200 (3 ms)
+08:38:47 INFO    POST /api/order/add -> 409 (0 ms)
+08:38:48 INFO    POST /api/order/add -> 409 (0 ms)
+08:39:18 INFO    POST /api/order/add -> 409 (0 ms)
+08:39:28 INFO    customer: Table 1
+08:39:28 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+08:39:28 INFO    POST /api/chat -> 200 (44 ms)
+08:39:32 INFO    direct add 'Veggie Burger' -> ok
+08:39:32 INFO    POST /api/order/add -> 200 (20 ms)
+08:39:34 INFO    direct add 'French Fries' -> ok
+08:39:34 INFO    POST /api/order/add -> 200 (23 ms)
+08:39:37 INFO    customer: /confirm
+08:39:37 INFO    waiter (STATE_REVIEW): Here is your order for Table 1:
+08:39:37 INFO    POST /api/chat -> 200 (22 ms)
+08:39:44 INFO    customer: /confirm
+08:39:44 INFO    waiter (STATE_GREETING): ================================================================
+08:39:44 INFO    POST /api/chat -> 200 (25 ms)
+08:40:03 INFO    customer: table 1
+08:40:04 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+08:40:04 INFO    POST /api/chat -> 200 (23 ms)
+08:47:58 INFO    Ollama status: ONLINE 
+08:47:58 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8000 (Ctrl+C to stop)
+08:47:59 INFO    GET / -> 200 (0 ms)
+08:47:59 INFO    GET /api/status -> 404 (1 ms)
+08:47:59 INFO    GET /api/menu -> 200 (6 ms)
+08:47:59 INFO    GET /images/cheeseburger.jpg -> 200 (2 ms)
+08:48:00 INFO    GET /images/french-fries.jpg -> 200 (1 ms)
+08:48:00 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (3 ms)
+08:48:00 INFO    GET /images/veggie-burger.jpg -> 200 (3 ms)
+08:48:00 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (4 ms)
+08:48:00 INFO    GET /images/pesto-pasta.jpg -> 200 (8 ms)
+08:48:00 INFO    GET /images/garden-salad.jpg -> 200 (1 ms)
+08:48:00 INFO    GET /images/onion-rings.jpg -> 200 (2 ms)
+08:48:00 INFO    GET /images/iced-tea.jpg -> 200 (2 ms)
+08:48:00 INFO    GET /images/mango-smoothie.jpg -> 200 (1 ms)
+08:48:00 INFO    GET /images/cola.jpg -> 200 (1 ms)
+08:48:00 INFO    GET /favicon.ico -> 204 (0 ms)
+08:48:00 INFO    GET /images/bottled-water.jpg -> 200 (2 ms)
+08:48:00 INFO    GET /images/matcha-sea-salt.jpg -> 200 (2 ms)
+08:48:00 INFO    GET /images/leche-flan.jpg -> 200 (2 ms)
+08:48:00 INFO    GET /images/halo-halo.jpg -> 200 (1 ms)
+08:48:07 INFO    customer: Table 1
+08:48:08 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+08:48:08 INFO    POST /api/chat -> 200 (22 ms)
+08:48:08 INFO    GET /api/cart -> 404 (0 ms)
+08:48:19 INFO    POST /api/cart/add -> 404 (0 ms)
+08:48:19 INFO    GET /api/cart -> 404 (0 ms)
+08:48:26 INFO    POST /api/confirm -> 404 (0 ms)
+08:48:38 INFO    customer: Table 1
+08:48:41 INFO    POST /api/cart/add -> 404 (0 ms)
+08:48:41 INFO    GET /api/cart -> 404 (0 ms)
+08:48:54 INFO    waiter (STATE_TAKING_ORDER): The table is empty; there is nothing to review.
+08:48:54 INFO    POST /api/chat -> 200 (15576 ms)
+08:48:54 INFO    GET /api/cart -> 404 (0 ms)
+08:51:09 INFO    Ollama status: ONLINE 
+08:51:09 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8000 (Ctrl+C to stop)
+08:51:10 INFO    GET / -> 200 (0 ms)
+08:51:10 INFO    GET /api/menu -> 200 (3 ms)
+08:51:10 INFO    GET /api/status -> 404 (0 ms)
+08:51:10 INFO    GET /favicon.ico -> 204 (0 ms)
+08:53:47 INFO    Ollama status: ONLINE 
+08:53:47 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8000 (Ctrl+C to stop)
+08:53:48 INFO    GET / -> 200 (0 ms)
+08:53:49 INFO    GET /api/status -> 404 (0 ms)
+08:53:49 INFO    GET /api/menu -> 200 (4 ms)
+08:53:49 INFO    GET /images/veggie-burger.jpg -> 200 (2 ms)
+08:53:49 INFO    GET /images/cheeseburger.jpg -> 200 (3 ms)
+08:53:49 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (6 ms)
+08:53:49 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (7 ms)
+08:53:49 INFO    GET /images/pesto-pasta.jpg -> 200 (8 ms)
+08:53:49 INFO    GET /images/french-fries.jpg -> 200 (6 ms)
+08:53:49 INFO    GET /favicon.ico -> 204 (1 ms)
+08:53:49 INFO    GET /images/garden-salad.jpg -> 200 (1 ms)
+08:53:49 INFO    GET /images/mango-smoothie.jpg -> 200 (2 ms)
+08:53:49 INFO    GET /images/iced-tea.jpg -> 200 (2 ms)
+08:53:49 INFO    GET /images/cola.jpg -> 200 (2 ms)
+08:53:49 INFO    GET /images/onion-rings.jpg -> 200 (4 ms)
+08:53:49 INFO    GET /images/bottled-water.jpg -> 200 (0 ms)
+08:53:49 INFO    GET /images/matcha-sea-salt.jpg -> 200 (1 ms)
+08:53:49 INFO    GET /images/leche-flan.jpg -> 200 (2 ms)
+08:53:49 INFO    GET /images/halo-halo.jpg -> 200 (2 ms)
+08:53:53 INFO    POST /api/session -> 404 (0 ms)
+08:53:53 INFO    customer: Table 1
+08:53:53 INFO    GET /api/cart -> 404 (1 ms)
+08:53:53 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+08:53:53 INFO    POST /api/chat -> 200 (50 ms)
+08:53:53 INFO    GET /api/cart -> 404 (0 ms)
+08:54:05 INFO    customer: /menu
+08:54:05 INFO    waiter (STATE_TAKING_ORDER): MAINS
+08:54:05 INFO    POST /api/chat -> 200 (7 ms)
+08:54:05 INFO    GET /api/cart -> 404 (0 ms)
+08:55:25 INFO    POST /api/cart/add -> 404 (0 ms)
+08:55:25 INFO    GET /api/cart -> 404 (0 ms)
+08:55:27 INFO    POST /api/confirm -> 404 (0 ms)
+08:57:56 INFO    Ollama status: ONLINE 
+08:57:56 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+08:57:56 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8001 (Ctrl+C to stop)
+08:57:57 INFO    GET / -> 200 (0 ms)
+08:57:57 INFO    GET /api/status -> 404 (0 ms)
+08:57:57 INFO    GET /api/menu -> 200 (3 ms)
+08:57:57 INFO    GET /images/cheeseburger.jpg -> 200 (1 ms)
+08:57:57 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (1 ms)
+08:57:57 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (3 ms)
+08:57:57 INFO    GET /images/pesto-pasta.jpg -> 200 (3 ms)
+08:57:57 INFO    GET /images/veggie-burger.jpg -> 200 (6 ms)
+08:57:57 INFO    GET /images/french-fries.jpg -> 200 (1 ms)
+08:57:57 INFO    GET /images/garden-salad.jpg -> 200 (0 ms)
+08:57:57 INFO    GET /images/iced-tea.jpg -> 200 (0 ms)
+08:57:57 INFO    GET /images/onion-rings.jpg -> 200 (1 ms)
+08:57:57 INFO    GET /images/mango-smoothie.jpg -> 200 (2 ms)
+08:57:57 INFO    GET /images/cola.jpg -> 200 (2 ms)
+08:57:57 INFO    GET /favicon.ico -> 204 (0 ms)
+08:57:57 INFO    GET /images/bottled-water.jpg -> 200 (2 ms)
+08:57:57 INFO    GET /images/matcha-sea-salt.jpg -> 200 (1 ms)
+08:57:57 INFO    GET /images/leche-flan.jpg -> 200 (0 ms)
+08:57:57 INFO    GET /images/halo-halo.jpg -> 200 (2 ms)
+08:58:09 INFO    POST /api/session -> 404 (0 ms)
+08:58:09 INFO    customer: Table 2
+08:58:09 INFO    GET /api/cart -> 404 (0 ms)
+08:58:09 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 2 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+08:58:09 INFO    POST /api/chat -> 200 (60 ms)
+08:58:09 INFO    GET /api/cart -> 404 (0 ms)
+08:58:19 INFO    POST /api/cart/add -> 404 (0 ms)
+08:58:19 INFO    GET /api/cart -> 404 (0 ms)
+08:58:26 INFO    POST /api/cart/add -> 404 (0 ms)
+08:58:26 INFO    GET /api/cart -> 404 (0 ms)
+08:58:35 INFO    session reset
+08:58:35 INFO    POST /api/reset -> 200 (16 ms)
+08:58:35 INFO    GET / -> 200 (0 ms)
+08:58:35 INFO    GET /api/status -> 404 (0 ms)
+08:58:35 INFO    GET /api/menu -> 200 (3 ms)
+08:58:35 INFO    GET /favicon.ico -> 204 (0 ms)
+09:00:26 INFO    Ollama status: ONLINE 
+09:00:26 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+09:00:26 WARNING Port 8001 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+09:00:26 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8002 (Ctrl+C to stop)
+09:00:27 INFO    GET / -> 200 (0 ms)
+09:00:28 INFO    GET /api/status -> 404 (0 ms)
+09:00:28 INFO    GET /api/menu -> 200 (3 ms)
+09:00:28 INFO    GET /favicon.ico -> 204 (0 ms)
+09:00:28 INFO    GET /images/cheeseburger.jpg -> 200 (3 ms)
+09:00:28 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (4 ms)
+09:00:28 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (4 ms)
+09:00:28 INFO    GET /images/french-fries.jpg -> 200 (1 ms)
+09:00:28 INFO    GET /images/pesto-pasta.jpg -> 200 (3 ms)
+09:00:28 INFO    GET /images/veggie-burger.jpg -> 200 (1 ms)
+09:00:28 INFO    GET /images/garden-salad.jpg -> 200 (3 ms)
+09:00:28 INFO    GET /images/onion-rings.jpg -> 200 (0 ms)
+09:00:28 INFO    GET /images/iced-tea.jpg -> 200 (1 ms)
+09:00:28 INFO    GET /images/mango-smoothie.jpg -> 200 (1 ms)
+09:00:28 INFO    GET /images/cola.jpg -> 200 (3 ms)
+09:00:28 INFO    GET /images/bottled-water.jpg -> 200 (2 ms)
+09:00:28 INFO    GET /images/matcha-sea-salt.jpg -> 200 (1 ms)
+09:00:28 INFO    GET /images/halo-halo.jpg -> 200 (0 ms)
+09:00:28 INFO    GET /images/leche-flan.jpg -> 200 (1 ms)
+09:01:15 INFO    POST /api/session -> 404 (0 ms)
+09:01:15 INFO    customer: Table 1
+09:01:15 INFO    GET /api/cart -> 404 (0 ms)
+09:01:15 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+09:01:15 INFO    POST /api/chat -> 200 (31 ms)
+09:01:15 INFO    GET /api/cart -> 404 (0 ms)
+09:01:17 INFO    POST /api/cart/add -> 404 (0 ms)
+09:01:17 INFO    GET /api/cart -> 404 (0 ms)
+09:03:38 INFO    Ollama status: ONLINE 
+09:03:38 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+09:03:38 WARNING Port 8001 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+09:03:38 WARNING Port 8002 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8003
+09:03:38 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8003 (Ctrl+C to stop)
+09:03:39 INFO    GET / -> 200 (0 ms)
+09:03:39 INFO    GET /api/menu -> 200 (3 ms)
+09:03:39 INFO    GET /api/status -> 404 (5 ms)
+09:03:39 INFO    GET /images/cheeseburger.jpg -> 200 (1 ms)
+09:03:39 INFO    GET /images/veggie-burger.jpg -> 200 (2 ms)
+09:03:39 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (3 ms)
+09:03:39 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (10 ms)
+09:03:39 INFO    GET /images/pesto-pasta.jpg -> 200 (11 ms)
+09:03:39 INFO    GET /images/french-fries.jpg -> 200 (1 ms)
+09:03:39 INFO    GET /favicon.ico -> 204 (0 ms)
+09:03:39 INFO    GET /images/garden-salad.jpg -> 200 (1 ms)
+09:03:39 INFO    GET /images/onion-rings.jpg -> 200 (3 ms)
+09:03:39 INFO    GET /images/iced-tea.jpg -> 200 (1 ms)
+09:03:39 INFO    GET /images/mango-smoothie.jpg -> 200 (1 ms)
+09:03:39 INFO    GET /images/cola.jpg -> 200 (0 ms)
+09:03:39 INFO    GET /images/bottled-water.jpg -> 200 (8 ms)
+09:03:39 INFO    GET /images/matcha-sea-salt.jpg -> 200 (2 ms)
+09:03:39 INFO    GET /images/leche-flan.jpg -> 200 (1 ms)
+09:03:39 INFO    GET /images/halo-halo.jpg -> 200 (1 ms)
+09:08:06 INFO    Ollama status: ONLINE 
+09:08:06 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+09:08:06 WARNING Port 8001 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+09:08:06 WARNING Port 8002 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8003
+09:08:06 WARNING Port 8003 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8004
+09:08:06 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8004 (Ctrl+C to stop)
+09:08:06 INFO    GET / -> 200 (0 ms)
+09:08:07 INFO    GET /api/status -> 404 (0 ms)
+09:08:07 INFO    GET /api/menu -> 200 (3 ms)
+09:08:07 INFO    GET /favicon.ico -> 204 (0 ms)
+09:08:07 INFO    GET /images/cheeseburger.jpg -> 200 (1 ms)
+09:08:07 INFO    GET /images/veggie-burger.jpg -> 200 (1 ms)
+09:08:07 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (2 ms)
+09:08:07 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (3 ms)
+09:08:07 INFO    GET /images/french-fries.jpg -> 200 (2 ms)
+09:08:07 INFO    GET /images/pesto-pasta.jpg -> 200 (4 ms)
+09:08:07 INFO    GET /images/garden-salad.jpg -> 200 (0 ms)
+09:08:07 INFO    GET /images/onion-rings.jpg -> 200 (0 ms)
+09:08:07 INFO    GET /images/iced-tea.jpg -> 200 (1 ms)
+09:08:07 INFO    GET /images/mango-smoothie.jpg -> 200 (1 ms)
+09:08:07 INFO    GET /images/cola.jpg -> 200 (0 ms)
+09:08:07 INFO    GET /images/bottled-water.jpg -> 200 (0 ms)
+09:08:07 INFO    GET /images/matcha-sea-salt.jpg -> 200 (0 ms)
+09:08:07 INFO    GET /images/halo-halo.jpg -> 200 (1 ms)
+09:08:07 INFO    GET /images/leche-flan.jpg -> 200 (2 ms)
+09:30:31 INFO    Ollama status: ONLINE 
+09:30:31 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+09:30:31 WARNING Port 8001 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+09:30:31 WARNING Port 8002 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8003
+09:30:31 WARNING Port 8003 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8004
+09:30:31 WARNING Port 8004 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8005
+09:30:31 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8005 (Ctrl+C to stop)
+09:30:32 INFO    GET / -> 200 (0 ms)
+09:30:32 INFO    GET /favicon.ico -> 204 (0 ms)
+09:30:32 INFO    GET /api/menu -> 200 (87 ms)
+09:30:32 INFO    GET /images/cheeseburger.jpg -> 200 (2 ms)
+09:30:32 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (1 ms)
+09:30:32 INFO    GET /images/veggie-burger.jpg -> 200 (4 ms)
+09:30:32 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (2 ms)
+09:30:32 INFO    GET /images/pesto-pasta.jpg -> 200 (2 ms)
+09:30:32 INFO    GET /images/french-fries.jpg -> 200 (1 ms)
+09:30:32 INFO    GET /images/garden-salad.jpg -> 200 (1 ms)
+09:30:32 INFO    GET /images/iced-tea.jpg -> 200 (1 ms)
+09:30:32 INFO    GET /images/mango-smoothie.jpg -> 200 (1 ms)
+09:30:32 INFO    GET /images/onion-rings.jpg -> 200 (2 ms)
+09:30:32 INFO    GET /images/cola.jpg -> 200 (0 ms)
+09:30:32 INFO    GET /images/bottled-water.jpg -> 200 (1 ms)
+09:30:32 INFO    GET /images/matcha-sea-salt.jpg -> 200 (1 ms)
+09:30:32 INFO    GET /images/leche-flan.jpg -> 200 (1 ms)
+09:30:32 INFO    GET /images/halo-halo.jpg -> 200 (1 ms)
+09:30:36 INFO    customer: Table 1
+09:30:36 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+09:30:36 INFO    POST /api/chat -> 200 (29 ms)
+09:30:47 INFO    direct add 'Veggie Burger' -> ok
+09:30:47 INFO    POST /api/order/add -> 200 (22 ms)
+09:30:55 INFO    direct add 'Iced Tea' -> ok
+09:30:55 INFO    POST /api/order/add -> 200 (19 ms)
+09:31:00 INFO    customer: /confirm
+09:31:00 INFO    waiter (STATE_REVIEW): Here is your order for Table 1:
+09:31:00 INFO    POST /api/chat -> 200 (6 ms)
+09:31:07 INFO    customer: /confirm
+09:31:07 INFO    waiter (STATE_GREETING): ================================================================
+09:31:07 INFO    POST /api/chat -> 200 (23 ms)
+16:40:33 INFO    Ollama status: ONLINE 
+16:40:34 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8000 (Ctrl+C to stop)
+16:40:35 INFO    GET / -> 200 (319 ms)
+16:40:35 INFO    GET /favicon.ico -> 204 (0 ms)
+16:40:35 INFO    GET /api/menu -> 200 (151 ms)
+16:40:35 INFO    GET /images/cheeseburger.jpg -> 200 (5 ms)
+16:40:35 INFO    GET /images/veggie-burger.jpg -> 200 (3 ms)
+16:40:35 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (1 ms)
+16:40:35 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (39 ms)
+16:40:35 INFO    GET /images/pesto-pasta.jpg -> 200 (36 ms)
+16:40:35 INFO    GET /images/garden-salad.jpg -> 200 (4 ms)
+16:40:35 INFO    GET /images/french-fries.jpg -> 200 (17 ms)
+16:40:35 INFO    GET /images/iced-tea.jpg -> 200 (21 ms)
+16:40:35 INFO    GET /images/onion-rings.jpg -> 200 (28 ms)
+16:40:35 INFO    GET /images/mango-smoothie.jpg -> 200 (17 ms)
+16:40:35 INFO    GET /images/cola.jpg -> 200 (16 ms)
+16:40:35 INFO    GET /images/bottled-water.jpg -> 200 (18 ms)
+16:40:35 INFO    GET /images/matcha-sea-salt.jpg -> 200 (18 ms)
+16:40:35 INFO    GET /images/leche-flan.jpg -> 200 (18 ms)
+16:40:35 INFO    GET /images/halo-halo.jpg -> 200 (14 ms)
+16:40:42 INFO    POST /api/order/add -> 409 (0 ms)
+16:40:46 INFO    customer: Table 1
+16:40:46 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+16:40:46 INFO    POST /api/chat -> 200 (24 ms)
+16:40:56 INFO    direct add 'Cheeseburger' -> ok
+16:40:56 INFO    POST /api/order/add -> 200 (16 ms)
+16:41:00 INFO    customer: /confirm
+16:41:00 INFO    waiter (STATE_REVIEW): Here is your order for Table 1:
+16:41:00 INFO    POST /api/chat -> 200 (8 ms)
+16:41:05 INFO    customer: /confirm
+16:41:05 INFO    waiter (STATE_GREETING): ================================================================
+16:41:05 INFO    POST /api/chat -> 200 (25 ms)
+16:42:06 INFO    customer: table 2
+16:42:06 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 2 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+16:42:06 INFO    POST /api/chat -> 200 (19 ms)
+16:44:01 ERROR   Unhandled error on GET /api/status
+Traceback (most recent call last):
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 347, in _handle
+    self._json(code, payload, extra)
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 301, in _json
+    self._send(code, json.dumps(obj, ensure_ascii=False).encode("utf-8"), "application/json", extra)
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 298, in _send
+    self.wfile.write(body)
+  File "C:\Users\kckpi\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+20:55:02 INFO    Ollama status: ONLINE 
+20:55:02 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8000 (Ctrl+C to stop)
+20:55:04 INFO    GET / -> 200 (65 ms)
+20:55:06 INFO    GET /favicon.ico -> 204 (25 ms)
+20:55:06 INFO    GET /api/menu -> 200 (68 ms)
+20:55:06 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (2 ms)
+20:55:06 INFO    GET /images/veggie-burger.jpg -> 200 (2 ms)
+20:55:06 INFO    GET /images/cheeseburger.jpg -> 200 (3 ms)
+20:55:06 INFO    GET /images/french-fries.jpg -> 200 (12 ms)
+20:55:06 INFO    GET /images/pesto-pasta.jpg -> 200 (16 ms)
+20:55:06 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (18 ms)
+20:55:06 INFO    GET /images/garden-salad.jpg -> 200 (1 ms)
+20:55:06 INFO    GET /images/onion-rings.jpg -> 200 (20 ms)
+20:55:06 INFO    GET /images/iced-tea.jpg -> 200 (19 ms)
+20:55:06 INFO    GET /images/mango-smoothie.jpg -> 200 (15 ms)
+20:55:06 INFO    GET /images/cola.jpg -> 200 (15 ms)
+20:55:06 INFO    GET /images/bottled-water.jpg -> 200 (16 ms)
+20:55:06 INFO    GET /images/matcha-sea-salt.jpg -> 200 (14 ms)
+20:55:06 INFO    GET /images/leche-flan.jpg -> 200 (14 ms)
+20:55:06 INFO    GET /images/halo-halo.jpg -> 200 (14 ms)
+20:55:22 INFO    POST /api/order/add -> 409 (0 ms)
+20:55:26 INFO    customer: Table 2
+20:55:26 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 2 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+20:55:26 INFO    POST /api/chat -> 200 (30 ms)
+20:55:36 INFO    direct add 'Veggie Burger' -> ok
+20:55:36 INFO    POST /api/order/add -> 200 (19 ms)
+20:55:41 INFO    direct add 'French Fries' -> ok
+20:55:41 INFO    POST /api/order/add -> 200 (19 ms)
+20:55:44 INFO    direct add 'Iced Tea' -> ok
+20:55:44 INFO    POST /api/order/add -> 200 (16 ms)
+20:55:48 INFO    customer: /confirm
+20:55:48 INFO    waiter (STATE_REVIEW): Here is your order for Table 2:
+20:55:48 INFO    POST /api/chat -> 200 (7 ms)
+20:55:51 INFO    customer: /confirm
+20:55:51 INFO    waiter (STATE_GREETING): ================================================================
+20:55:51 INFO    POST /api/chat -> 200 (23 ms)
+12:33:45 INFO    Ollama status: ONLINE 
+12:33:45 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8000 (Ctrl+C to stop)
+12:33:46 INFO    GET / -> 200 (0 ms)
+12:33:46 INFO    GET /api/payment-methods -> 200 (0 ms)
+12:33:46 INFO    GET /favicon.ico -> 204 (0 ms)
+12:33:46 INFO    GET /api/menu -> 200 (49 ms)
+12:33:46 INFO    GET /images/veggie-burger.jpg -> 200 (7 ms)
+12:33:46 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (7 ms)
+12:33:46 INFO    GET /images/cheeseburger.jpg -> 200 (7 ms)
+12:33:46 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (3 ms)
+12:33:46 INFO    GET /images/french-fries.jpg -> 200 (2 ms)
+12:33:46 INFO    GET /images/garden-salad.jpg -> 200 (8 ms)
+12:33:46 INFO    GET /images/pesto-pasta.jpg -> 200 (30 ms)
+12:33:46 INFO    GET /images/onion-rings.jpg -> 200 (11 ms)
+12:33:46 INFO    GET /images/iced-tea.jpg -> 200 (22 ms)
+12:33:46 INFO    GET /images/mango-smoothie.jpg -> 200 (2 ms)
+12:33:46 INFO    GET /images/cola.jpg -> 200 (2 ms)
+12:33:46 INFO    GET /images/leche-flan.jpg -> 200 (1 ms)
+12:33:46 INFO    GET /images/bottled-water.jpg -> 200 (4 ms)
+12:33:46 INFO    GET /images/halo-halo.jpg -> 200 (1 ms)
+12:33:47 INFO    GET /images/matcha-sea-salt.jpg -> 200 (17 ms)
+12:33:52 INFO    customer: Table 1
+12:33:52 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+12:33:52 INFO    POST /api/chat -> 200 (24 ms)
+12:34:07 INFO    direct add 'Veggie Burger' -> ok
+12:34:07 INFO    POST /api/order/add -> 200 (34 ms)
+12:34:14 INFO    direct add 'Spaghetti Bolognese' -> ok
+12:34:14 INFO    POST /api/order/add -> 200 (29 ms)
+12:34:38 INFO    checkout via BPI -> confirmed
+12:34:38 INFO    POST /api/checkout -> 200 (30 ms)
+10:39:41 INFO    Ollama status: ONLINE 
+10:39:41 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8000 (Ctrl+C to stop)
+10:39:42 INFO    GET / -> 200 (0 ms)
+10:39:42 INFO    GET /api/payment-methods -> 200 (0 ms)
+10:39:42 INFO    GET /favicon.ico -> 204 (0 ms)
+10:39:42 INFO    GET /api/menu -> 200 (31 ms)
+10:39:42 INFO    GET /images/veggie-burger.jpg -> 200 (2 ms)
+10:39:42 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (1 ms)
+10:39:42 INFO    GET /images/cheeseburger.jpg -> 200 (6 ms)
+10:39:42 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (4 ms)
+10:39:42 INFO    GET /images/french-fries.jpg -> 200 (1 ms)
+10:39:42 INFO    GET /images/garden-salad.jpg -> 200 (2 ms)
+10:39:42 INFO    GET /images/onion-rings.jpg -> 200 (6 ms)
+10:39:42 INFO    GET /images/iced-tea.jpg -> 200 (1 ms)
+10:39:42 INFO    GET /images/pesto-pasta.jpg -> 200 (34 ms)
+10:39:42 INFO    GET /images/mango-smoothie.jpg -> 200 (1 ms)
+10:39:42 INFO    GET /images/cola.jpg -> 200 (1 ms)
+10:39:42 INFO    GET /images/bottled-water.jpg -> 200 (7 ms)
+10:39:42 INFO    GET /images/leche-flan.jpg -> 200 (1 ms)
+10:39:42 INFO    GET /images/halo-halo.jpg -> 200 (1 ms)
+10:39:42 INFO    GET /images/matcha-sea-salt.jpg -> 200 (37 ms)
+10:40:25 INFO    customer: Table 1.
+10:40:25 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+10:40:25 INFO    POST /api/chat -> 200 (20 ms)
+10:40:49 INFO    customer: Chicken adobo rice.
+10:41:10 INFO    waiter (STATE_TAKING_ORDER): The quantity for the Chicken adobo rice must be a positive integer. Please enter a valid quantity.
+10:41:10 INFO    POST /api/chat -> 200 (21258 ms)
+10:41:23 INFO    customer: Can I get chicken adobo rice one Adobe rice?
+10:41:31 INFO    waiter (STATE_TAKING_ORDER): The quantity for the Chicken adobo rice must be a positive integer. Please enter a valid quantity.
+10:41:31 INFO    POST /api/chat -> 200 (7868 ms)
+10:41:36 INFO    direct add 'Chicken Adobo Rice' -> ok
+10:41:36 INFO    POST /api/order/add -> 200 (18 ms)
+10:41:40 INFO    direct add 'Spaghetti Bolognese' -> ok
+10:41:40 INFO    POST /api/order/add -> 200 (18 ms)
+10:41:46 INFO    checkout via Cash -> confirmed
+10:41:46 INFO    POST /api/checkout -> 200 (24 ms)
+10:43:11 INFO    Ollama status: ONLINE 
+10:43:11 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+10:43:11 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8001 (Ctrl+C to stop)
+10:43:11 INFO    GET / -> 200 (0 ms)
+10:43:12 INFO    GET /api/payment-methods -> 200 (0 ms)
+10:43:12 INFO    GET /favicon.ico -> 204 (0 ms)
+10:43:12 INFO    GET /api/menu -> 200 (43 ms)
+10:43:12 INFO    GET /images/veggie-burger.jpg -> 200 (1 ms)
+10:43:12 INFO    GET /images/cheeseburger.jpg -> 200 (2 ms)
+10:43:12 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (2 ms)
+10:43:12 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (2 ms)
+10:43:12 INFO    GET /images/pesto-pasta.jpg -> 200 (3 ms)
+10:43:12 INFO    GET /images/french-fries.jpg -> 200 (0 ms)
+10:43:12 INFO    GET /images/garden-salad.jpg -> 200 (2 ms)
+10:43:12 INFO    GET /images/onion-rings.jpg -> 200 (2 ms)
+10:43:12 INFO    GET /images/iced-tea.jpg -> 200 (1 ms)
+10:43:12 INFO    GET /images/mango-smoothie.jpg -> 200 (1 ms)
+10:43:12 INFO    GET /images/cola.jpg -> 200 (4 ms)
+10:43:12 INFO    GET /images/bottled-water.jpg -> 200 (4 ms)
+10:43:12 INFO    GET /images/matcha-sea-salt.jpg -> 200 (1 ms)
+10:43:12 INFO    GET /images/leche-flan.jpg -> 200 (1 ms)
+10:43:12 INFO    GET /images/halo-halo.jpg -> 200 (1 ms)
+10:43:16 INFO    customer: Table 1
+10:43:16 INFO    waiter (STATE_TAKING_ORDER): Lovely, Table 1 is all set! What can I get for you? You can ask about the menu (type /menu to see ev
+10:43:16 INFO    POST /api/chat -> 200 (18 ms)
+10:43:18 INFO    direct add 'Spaghetti Bolognese' -> ok
+10:43:18 INFO    POST /api/order/add -> 200 (13 ms)
+10:43:19 INFO    direct add 'Veggie Burger' -> ok
+10:43:19 INFO    POST /api/order/add -> 200 (15 ms)
+10:43:24 INFO    checkout via Maribank -> confirmed
+10:43:24 INFO    POST /api/checkout -> 200 (24 ms)
+10:44:05 INFO    Ollama status: ONLINE 
+10:44:05 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+10:44:05 WARNING Port 8001 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+10:44:05 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8002 (Ctrl+C to stop)
+10:44:06 INFO    GET / -> 200 (0 ms)
+10:44:06 INFO    GET /api/payment-methods -> 200 (0 ms)
+10:44:06 INFO    GET /favicon.ico -> 204 (0 ms)
+10:44:06 INFO    GET /api/menu -> 200 (58 ms)
+10:44:06 INFO    GET /images/veggie-burger.jpg -> 200 (1 ms)
+10:44:06 INFO    GET /images/cheeseburger.jpg -> 200 (2 ms)
+10:44:06 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (2 ms)
+10:44:06 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (3 ms)
+10:44:06 INFO    GET /images/pesto-pasta.jpg -> 200 (7 ms)
+10:44:06 INFO    GET /images/french-fries.jpg -> 200 (1 ms)
+10:44:06 INFO    GET /images/garden-salad.jpg -> 200 (0 ms)
+10:44:06 INFO    GET /images/onion-rings.jpg -> 200 (0 ms)
+10:44:06 INFO    GET /images/iced-tea.jpg -> 200 (0 ms)
+10:44:06 INFO    GET /images/mango-smoothie.jpg -> 200 (0 ms)
+10:44:06 INFO    GET /images/cola.jpg -> 200 (0 ms)
+10:44:06 INFO    GET /images/bottled-water.jpg -> 200 (1 ms)
+10:44:06 INFO    GET /images/matcha-sea-salt.jpg -> 200 (0 ms)
+10:44:06 INFO    GET /images/leche-flan.jpg -> 200 (0 ms)
+10:44:06 INFO    GET /images/halo-halo.jpg -> 200 (1 ms)
+10:44:08 ERROR   Unhandled error on GET /api/status
+Traceback (most recent call last):
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 378, in _handle
+    self._json(code, payload, extra)
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 332, in _json
+    self._send(code, json.dumps(obj, ensure_ascii=False).encode("utf-8"), "application/json", extra)
+  File "C:\Users\kckpi\Downloads\Pair\web_dashboard.py", line 329, in _send
+    self.wfile.write(body)
+  File "C:\Users\kckpi\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+10:48:58 INFO    Ollama status: ONLINE 
+10:48:58 WARNING Port 8000 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8001
+10:48:58 WARNING Port 8001 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8002
+10:48:58 WARNING Port 8002 not available (Only one usage of each socket address (protocol/network address/port) is normally permitted) - trying 8003
+10:48:58 INFO    Perpetual Bistro dashboard running at http://127.0.0.1:8003 (Ctrl+C to stop)
+10:48:59 INFO    GET / -> 200 (0 ms)
+10:49:00 INFO    GET /api/payment-methods -> 200 (0 ms)
+10:49:00 INFO    GET /favicon.ico -> 204 (10 ms)
+10:49:00 INFO    GET /api/menu -> 200 (57 ms)
+10:49:00 INFO    GET /images/veggie-burger.jpg -> 200 (2 ms)
+10:49:00 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (2 ms)
+10:49:00 INFO    GET /images/cheeseburger.jpg -> 200 (3 ms)
+10:49:00 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (4 ms)
+10:49:00 INFO    GET /images/pesto-pasta.jpg -> 200 (4 ms)
+10:49:00 INFO    GET /images/french-fries.jpg -> 200 (1 ms)
+10:49:00 INFO    GET /images/garden-salad.jpg -> 200 (3 ms)
+10:49:00 INFO    GET /images/onion-rings.jpg -> 200 (4 ms)
+10:49:00 INFO    GET /images/iced-tea.jpg -> 200 (2 ms)
+10:49:00 INFO    GET /images/mango-smoothie.jpg -> 200 (0 ms)
+10:49:00 INFO    GET /images/cola.jpg -> 200 (1 ms)
+10:49:00 INFO    GET /images/bottled-water.jpg -> 200 (2 ms)
+10:49:00 INFO    GET /images/matcha-sea-salt.jpg -> 200 (0 ms)
+10:49:00 INFO    GET /images/leche-flan.jpg -> 200 (0 ms)
+10:49:00 INFO    GET /images/halo-halo.jpg -> 200 (0 ms)
+10:54:33 INFO    session reset
+10:54:33 INFO    POST /api/reset -> 200 (0 ms)
+10:54:33 INFO    GET / -> 200 (0 ms)
+10:54:33 INFO    GET /api/payment-methods -> 200 (0 ms)
+10:54:34 INFO    GET /favicon.ico -> 204 (0 ms)
+10:54:34 INFO    GET /api/menu -> 200 (52 ms)
+10:54:34 INFO    GET /images/cheeseburger.jpg -> 200 (1 ms)
+10:54:34 INFO    GET /images/veggie-burger.jpg -> 200 (2 ms)
+10:54:34 INFO    GET /images/spaghetti-bolognese.jpg -> 200 (2 ms)
+10:54:34 INFO    GET /images/chicken-adobo-rice.jpg -> 200 (1 ms)
+10:54:34 INFO    GET /images/pesto-pasta.jpg -> 200 (2 ms)
+10:54:34 INFO    GET /images/french-fries.jpg -> 200 (0 ms)
+10:54:34 INFO    GET /images/garden-salad.jpg -> 200 (0 ms)
+10:54:34 INFO    GET /images/iced-tea.jpg -> 200 (1 ms)
+10:54:34 INFO    GET /images/onion-rings.jpg -> 200 (2 ms)
+10:54:34 INFO    GET /images/mango-smoothie.jpg -> 200 (1 ms)
+10:54:34 INFO    GET /images/cola.jpg -> 200 (1 ms)
+10:54:34 INFO    GET /images/bottled-water.jpg -> 200 (1 ms)
+10:54:34 INFO    GET /images/matcha-sea-salt.jpg -> 200 (1 ms)
+10:54:34 INFO    GET /images/leche-flan.jpg -> 200 (1 ms)
+10:54:34 INFO    GET /images/halo-halo.jpg -> 200 (0 ms)
